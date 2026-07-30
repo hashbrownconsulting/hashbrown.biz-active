@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Brown: B2B Outbound Systems Agency | Asia Pacific</title>
+<meta name="description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- home-page-only styles ---- */
+.hero{padding:clamp(72px,10vw,140px) 0 clamp(48px,7vw,96px);overflow:hidden;position:relative}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(40px,6.4vw,84px);max-width:14ch;position:relative;z-index:2}
+.hero-sub{max-width:56ch;margin:32px 0 36px;font-size:clamp(16px,1.4vw,19px);position:relative;z-index:2}
+.hero-crop{position:absolute;right:-4%;top:-18%;z-index:1;pointer-events:none;width:clamp(340px,38vw,600px);opacity:1}
+.hero-crop path{fill:var(--panel)}
+@media(max-width:700px){.hero-crop{display:none}.final-crop{display:none}}
+.proof{border-bottom:1px solid var(--rule);padding:26px 0;background:var(--paper)}
+.logo-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+.logo-slot{flex:1 1 150px;min-width:130px;height:92px;background:#fff;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;padding:16px}
+.logo-slot img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
+.card{background:var(--paper);padding:36px 30px}
+.card h3{font-size:19px;margin-bottom:12px}
+.card p{font-size:15px}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
+.layer{background:var(--paper);padding:28px 22px;display:flex;flex-direction:column;gap:12px}
+.layer svg{width:52px;height:52px}
+.layer .idx{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ghost)}
+.layer h3{font-size:16px;line-height:1.25}
+.layer p{font-size:13.5px}
+@media(max-width:1000px){.rail{grid-template-columns:1fr}.layer{flex-direction:row;align-items:center;gap:20px}.layer svg{flex:0 0 44px;height:44px}.layer .idx{min-width:28px}.layer h3{min-width:170px}}
+@media(max-width:640px){.layer{flex-wrap:wrap}}
+.after-link{display:inline-block;margin-top:28px;font-weight:700;text-decoration:none;color:var(--black);border-bottom:2px solid var(--black);padding-bottom:2px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:center;padding:clamp(40px,5vw,72px) 0;border-top:1px solid var(--rule)}
+.why:first-of-type{border-top:0}
+.why .img{aspect-ratio:4/3;background:linear-gradient(135deg,#E9E9EC 0%,#D6D6DB 100%);display:flex;align-items:flex-end;padding:18px}
+.why .img span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
+.why .img.filled{background:var(--panel);padding:20px;align-items:center;justify-content:center}
+.why .img.filled img{width:100%;height:100%;object-fit:contain;display:block}
+.why h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:16px}
+.why:nth-of-type(even) .img{order:2}
+@media(max-width:820px){.why{grid-template-columns:1fr}.why:nth-of-type(even) .img{order:0}}
+.spec{width:100%;border-collapse:collapse;margin-top:44px;border:1px solid var(--rule)}
+.spec th,.spec td{border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;padding:26px 24px}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
+.spec th{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--ghost);font-weight:500;width:80px}
+.spec td.name{font-weight:800;color:var(--black);width:220px;font-size:18px}
+@media(max-width:700px){.spec th,.spec td{display:block;width:auto;padding:8px 18px}.spec tr{display:block;border-bottom:1px solid var(--rule);padding:14px 0}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat{background:var(--paper);padding:44px 28px}
+.stat .num{font-weight:800;font-size:clamp(30px,3.4vw,46px);color:var(--black);letter-spacing:-.02em}
+.stat .lab{margin-top:6px;font-size:13px;color:var(--ghost)}
+.verify{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#B4632F;letter-spacing:.1em}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+.case blockquote{font-size:clamp(20px,2.2vw,28px);font-weight:700;color:var(--black);line-height:1.3;max-width:30ch;letter-spacing:-.01em}
+.case p{max-width:62ch;margin-top:22px}
+.qual{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
+.qual > div{background:var(--paper);padding:36px 32px}
+.qual h3{font-size:18px;margin-bottom:16px}
+.qual ul{list-style:none}
+.qual li{padding:8px 0 8px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
+.qual li:last-child{border-bottom:0}
+.qual li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
+@media(max-width:820px){.qual{grid-template-columns:1fr}}
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-item:first-of-type{border-top:1px solid var(--rule)}
+.faq-item button{width:100%;background:none;border:0;text-align:left;cursor:pointer;font-family:inherit;font-size:17px;font-weight:700;color:var(--black);padding:24px 44px 24px 0;position:relative}
+.faq-item button::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-weight:400;font-size:24px;color:var(--ghost)}
+.faq-item button[aria-expanded="true"]::after{content:"−"}
+.faq-a{display:none;padding:0 0 26px;max-width:64ch;font-size:15px}
+.faq-item button[aria-expanded="true"] + .faq-a{display:block}
+.final{background:var(--black);color:#fff;overflow:hidden;position:relative}
+.final .wrap{position:relative;z-index:2;padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px)}
+.final h2{color:#fff;font-size:clamp(34px,5vw,64px);max-width:16ch}
+.final .micro{color:#8B8B93}
+.final-crop{position:absolute;right:-6%;top:-24%;width:clamp(320px,34vw,540px);pointer-events:none}
+.final-crop path{fill:#1D1D21}
+.price-notes-box{border:1px solid var(--rule);background:var(--paper);padding:24px 28px;margin-top:28px;max-width:none}
+.price-notes-box p{font-size:13.5px;color:var(--ghost)}
+.price-notes-box p+p{margin-top:12px}
+.cases-4{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.cases-4{grid-template-columns:1fr}}
+.sticky-cta{display:none}
+@media(max-width:700px){
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--rule)}
+  .sticky-cta .btn{display:block;text-align:center;width:100%}
+  body{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG defs: the mark, reused site-wide -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="hb-mark" d="M110,6 C130,2 148,10 158,16 C176,10 196,24 194,44 C206,52 212,66 208,82 C214,96 210,112 206,124 C214,138 212,156 206,168 C214,182 212,200 206,212 C212,226 210,244 202,254 C206,272 194,288 178,290 C170,306 150,314 134,308 C120,318 98,318 84,308 C66,314 46,306 40,290 C22,288 10,272 16,254 C6,244 6,226 12,212 C4,200 4,182 12,168 C4,156 4,138 12,124 C6,112 4,96 12,82 C6,66 14,52 26,44 C24,24 44,10 62,16 C74,8 92,2 110,6 Z"/>
+  </defs>
+</svg>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="index.html">
+      <svg class="mark" viewBox="0 0 220 320" style="height:26px" aria-hidden="true"><use href="#hb-mark" fill="#111113"/></svg>
+      Hash Brown
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#system">The System</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#qualify">Industries</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#case">Case Studies</a>
+      <a href="#why">About</a>
+      <a class="btn" href="#contact">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-crop" viewBox="0 0 220 320" aria-hidden="true"><use href="#hb-mark"/></svg>
+  <div class="wrap">
+    <p class="mono"># B2B OUTBOUND SYSTEMS · ASIA PACIFIC</p>
+    <h1 style="margin-top:22px">You should only ever be talking to qualified leads.</h1>
+    <p class="hero-sub">Hash Brown builds complete B2B outbound systems: email, LinkedIn, and the funnel in between, so warm, qualified conversations land in your inbox while you run the business. Built in Asia Pacific. Owned by you.</p>
+    <a class="btn" href="#contact">Book a call</a>
+    <p class="micro">60 minute discovery call. We'll tell you in one call if this isn't a fit.</p>
+  </div>
+  <div class="wrap" style="margin-top:clamp(48px,6vw,80px)">
+    <svg class="scallop" viewBox="0 0 1200 16" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,14 A10,10 0 0 1 20,14 A10,10 0 0 1 40,14 A10,10 0 0 1 60,14 A10,10 0 0 1 80,14 A10,10 0 0 1 100,14 A10,10 0 0 1 120,14 A10,10 0 0 1 140,14 A10,10 0 0 1 160,14 A10,10 0 0 1 180,14 A10,10 0 0 1 200,14 A10,10 0 0 1 220,14 A10,10 0 0 1 240,14 A10,10 0 0 1 260,14 A10,10 0 0 1 280,14 A10,10 0 0 1 300,14 A10,10 0 0 1 320,14 A10,10 0 0 1 340,14 A10,10 0 0 1 360,14 A10,10 0 0 1 380,14 A10,10 0 0 1 400,14 A10,10 0 0 1 420,14 A10,10 0 0 1 440,14 A10,10 0 0 1 460,14 A10,10 0 0 1 480,14 A10,10 0 0 1 500,14 A10,10 0 0 1 520,14 A10,10 0 0 1 540,14 A10,10 0 0 1 560,14 A10,10 0 0 1 580,14 A10,10 0 0 1 600,14 A10,10 0 0 1 620,14 A10,10 0 0 1 640,14 A10,10 0 0 1 660,14 A10,10 0 0 1 680,14 A10,10 0 0 1 700,14 A10,10 0 0 1 720,14 A10,10 0 0 1 740,14 A10,10 0 0 1 760,14 A10,10 0 0 1 780,14 A10,10 0 0 1 800,14 A10,10 0 0 1 820,14 A10,10 0 0 1 840,14 A10,10 0 0 1 860,14 A10,10 0 0 1 880,14 A10,10 0 0 1 900,14 A10,10 0 0 1 920,14 A10,10 0 0 1 940,14 A10,10 0 0 1 960,14 A10,10 0 0 1 980,14 A10,10 0 0 1 1000,14 A10,10 0 0 1 1020,14 A10,10 0 0 1 1040,14 A10,10 0 0 1 1060,14 A10,10 0 0 1 1080,14 A10,10 0 0 1 1100,14 A10,10 0 0 1 1120,14 A10,10 0 0 1 1140,14 A10,10 0 0 1 1160,14 A10,10 0 0 1 1180,14 A10,10 0 0 1 1200,14" />
+    </svg>
+  </div>
+</header>
+
+<section class="proof" aria-label="Clients">
+  <div class="wrap">
+    <p class="mono">Built with and for</p>
+    <div class="logo-row">
+      <div class="logo-slot"><img src="assets/logos/topiku.png" alt="Topiku"></div>
+      <div class="logo-slot"><img src="assets/logos/asasi.png" alt="Asasi"></div>
+      <div class="logo-slot"><img src="assets/logos/vocom.png" alt="Vocom"></div>
+      <div class="logo-slot"><img src="assets/logos/basho.png" alt="Basho Projects"></div>
+      <div class="logo-slot"><img src="assets/logos/bebop.png" alt="Bebop"></div>
+      <div class="logo-slot"><img src="assets/logos/briq.png" alt="Briq Bistro"></div>
+      <div class="logo-slot"><img src="assets/logos/brock.png" alt="Brock Butchery"></div>
+      <div class="logo-slot"><img src="assets/logos/bubble-bros.png" alt="Bubble Bros"></div>
+      <div class="logo-slot"><img src="assets/logos/bubble-squeak.png" alt="Bubble &amp; Squeak"></div>
+      <div class="logo-slot"><img src="assets/logos/crypto-pills-gaming.png" alt="Crypto Pills Gaming Company"></div>
+      <div class="logo-slot"><img src="assets/logos/client-03.png" alt="Client logo"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec panel">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 01 · The problem</span></div>
+    <h2>Most businesses can't stand up outbound on their own.</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>You built this on relationships.</h3>
+        <p>Real revenue, won over dinners, site visits, and handshake deals. That works, until you're the bottleneck. Every new opportunity still needs you in the room, and there's one of you.</p>
+      </div>
+      <div class="card">
+        <h3>You've been held hostage before.</h3>
+        <p>The industry standard is a freelancer running your outbound on accounts you don't control. Then the invoice dispute happens, and your pipeline disappears overnight. You've heard the stories.</p>
+      </div>
+      <div class="card">
+        <h3>You're getting outworked.</h3>
+        <p>Your competitors have systems firing every morning. You have a capable sales team waiting for the phone to ring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="system">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 02 · What we build</span></div>
+    <h2>It's a system, not a tactic.</h2>
+    <p class="lede">Outbound only works when every layer works. Get one wrong and the whole thing underperforms, and you won't know which one it was. We've already walked the minefield. We build the complete funnel and wire it into the sales team you already have.</p>
+    <div class="rail">
+      <div class="layer">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Icon: three arched inbox forms">
+          <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
+            <path d="M8,92 L8,50 A14,14 0 0 1 36,50 L36,92 Z"/>
+            <path d="M36,92 L36,38 A14,14 0 0 1 64,38 L64,92 Z"/>
+            <path d="M64,92 L64,50 A14,14 0 0 1 92,50 L92,92 Z"/>
+          </g>
+        </svg>
+        <span class="idx">01</span><h3>Domains &amp; inboxes</h3><p>Separate sending infrastructure. Your main domain never takes a risk.</p>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Icon: sun rising over scalloped edge">
+          <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
+            <path d="M18,58 A32,32 0 0 1 82,58 Z"/>
+            <path d="M8,92 L8,80 A14,14 0 0 1 36,80 L36,92 Z"/>
+            <path d="M36,92 L36,80 A14,14 0 0 1 64,80 L64,92 Z"/>
+            <path d="M64,92 L64,80 A14,14 0 0 1 92,80 L92,92 Z"/>
+          </g>
+        </svg>
+        <span class="idx">02</span><h3>Warm-up &amp; deliverability</h3><p>The unglamorous eight weeks that decide whether anything gets seen.</p>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Icon: grid of circles with one segmented diagonal cell">
+          <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
+            <circle cx="24" cy="24" r="15"/><circle cx="61" cy="24" r="15"/>
+            <circle cx="24" cy="61" r="15"/>
+            <path d="M46,46 L76,46 L46,76 Z"/>
+            <path d="M92,92 L62,92 L92,62 Z"/>
+          </g>
+        </svg>
+        <span class="idx">03</span><h3>Lead data &amp; segmentation</h3><p>Verified contacts matched to your ICP, sourced through our proprietary Enterprise backend.</p>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Icon: quarter circles stepping diagonally">
+          <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
+            <path d="M8,8 L40,8 A32,32 0 0 1 8,40 Z"/>
+            <path d="M36,36 L68,36 A32,32 0 0 1 36,68 Z"/>
+            <path d="M64,64 L92,64 A28,28 0 0 1 64,92 Z"/>
+          </g>
+        </svg>
+        <span class="idx">04</span><h3>Sequencing</h3><p>Email and LinkedIn touches, timed and tested. Digital brochures, not spam.</p>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Icon: funnel of shapes narrowing to one qualified form">
+          <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
+            <path d="M8,8 L36,8 L36,36 A28,28 0 0 1 8,8 Z"/>
+            <rect x="36" y="8" width="28" height="28"/>
+            <path d="M64,8 L92,8 A28,28 0 0 1 64,36 Z"/>
+            <rect x="36" y="36" width="28" height="28"/>
+            <path d="M36,92 L36,78 A14,14 0 0 1 64,78 L64,92 Z"/>
+          </g>
+        </svg>
+        <span class="idx">05</span><h3>Reply handling &amp; handover</h3><p>Qualified replies routed to your sales team. Everyone else, filtered out.</p>
+      </div>
+    </div>
+    <a class="after-link" href="#contact">Book a discovery call →</a>
+  </div>
+</section>
+
+<section class="sec panel" id="why">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 03 · Why Hash Brown</span></div>
+    <div class="why">
+      <div>
+        <h3>Digital brochures, not AI spam.</h3>
+        <p>You've received them. Over-personalized AI emails that have researched your entire background. Fake familiarity that everyone can see straight through. We use the tools, AI included, but we don't fake a relationship that isn't there. We send digital brochures instead: clean, brand-forward, honest outreach on automation that has worked for a decade. The plumber's flyer on your door: you don't need it until the pipe leaks, and then you call the name you already know.</p>
+      </div>
+      <div class="img filled"><img src="assets/hb-asset-02-noise-signal.svg" alt="Two panels: a dense, crowded field of shapes (spam) beside a single clean, considered form (a brand message)."></div>
+    </div>
+    <div class="why">
+      <div>
+        <h3>You keep the keys.</h3>
+        <p>Everything we build is built in your house. Your domains. Your inboxes. Your workspace. Your data. When the engagement ends, the system stays, documented and handed over. Nobody can hold your pipeline hostage, including us.</p>
+      </div>
+      <div class="img filled"><img src="assets/hb-asset-03-handover.svg" alt="Five identical four-petal forms in a row, shifting from solid black to outline, what we build becoming what you own."></div>
+    </div>
+    <div class="why">
+      <div>
+        <h3>Two founders. One client at a time.</h3>
+        <p>When you work with Hash Brown you work with Monty and Tom. Not an account manager reading your file, not a pod, not a platform. Two people who build the system, watch it run, and answer their own phone.</p>
+      </div>
+      <div class="img founders-img">
+        <figure><img src="assets/founders/monty-bw.jpg" alt="Monty, co-founder"><figcaption>Monty</figcaption></figure>
+        <figure><img src="assets/founders/tom-bw.jpg" alt="Tom, co-founder"><figcaption>Tom</figcaption></figure>
+      </div>
+    </div>
+    <div class="why">
+      <div>
+        <h3>Priced for businesses that do real deals.</h3>
+        <p>Our clients close contracts in the high six and seven figures. Against one deal like that, a properly built outbound system pays for itself. Your time is valuable. You should only be talking to qualified leads.</p>
+      </div>
+      <div class="img filled"><img src="assets/hb-asset-01-pattern-field.svg" alt="The Hash Brown pattern field, a grid of geometric tiles built from the brand's core shapes."></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="solutions">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 04 · How it works</span></div>
+    <h2>Discover. Build. Hand over.</h2>
+    <table class="spec">
+      <tr><th scope="row">01</th><td class="name">Discover</td><td>A 60 min call with the founders. We map your sales motion, your ticket size, and your capacity to receive leads. If we find that you do not need this system, we will suggest other solutions.</td></tr>
+      <tr><th scope="row">02</th><td class="name">Build or train</td><td><strong>Done-For-You</strong>: we build the complete system, roughly eight weeks including warm-up. <strong>Do-It-With-You</strong>: we train your team to run it on tools you buy and own.</td></tr>
+      <tr><th scope="row">03</th><td class="name">Hand over</td><td>Documentation, credentials, and a working system in your hands. You own it. We stay available.</td></tr>
+    </table>
+    <a class="after-link" href="#contact">Book a discovery call →</a>
+  </div>
+</section>
+
+<section class="sec panel" id="pricing">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 05 · Pricing</span></div>
+    <h2>Priced in the open.</h2>
+    <p class="lede">Our clients are operators who hate "book a demo to see pricing" as much as we do. So here it is. A properly built outbound system pays for itself.</p>
+    <div class="pricing-grid">
+      <div class="price">
+        <span class="tier">Done-For-You</span>
+        <div class="amt">US$6,000<small> one-time</small></div>
+        <div class="unit">Complete build, roughly eight weeks including warm-up.</div>
+        <ul>
+          <li>The complete outbound system, built end to end</li>
+          <li>Domains, inboxes, and sending infrastructure included</li>
+          <li>Lead sourcing built in-house, no per-lead agency markup</li>
+          <li>Documented and handed over. You own it.</li>
+        </ul>
+        <a class="btn" href="#contact">Book a call</a>
+      </div>
+      <div class="price">
+        <span class="tier">Do-It-With-You Consulting</span>
+        <div class="amt">US$200<small> / hour</small></div>
+        <div class="unit">Or US$750 / month for four sessions <span class="save">Save $50</span></div>
+        <ul>
+          <li>We train your team to run the system themselves</li>
+          <li>On tools you buy and own (roughly US$100 to $300/mo, we spec it first)</li>
+          <li>Four working sessions a month in the package</li>
+          <li>Additional sessions billed at the hourly rate</li>
+        </ul>
+        <a class="btn" href="#contact">Book a call</a>
+      </div>
+    </div>
+    <div class="price-notes-box">
+      <p>No hidden costs. Do-It-With-You clients buy their own tools; we spec the stack before you spend anything. Done-For-You includes the infrastructure in the build.</p>
+      <p>Nonprofit, impact organisation, or artist doing the right thing? We're open to discounts and collaborations on a case-by-case basis, some of it performance-based. We're always down to help, even if that's just a short email back and forth. Ask on the call.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 06 · Beyond outbound</span></div>
+    <h2>Outbound is the core. It isn't all we do.</h2>
+    <p class="lede">The same operators who need outbound usually need a few other things built properly. If it drives qualified pipeline, we can build it with you.</p>
+    <div class="services">
+      <div class="service"><h3>Web development</h3><p>Fast, clean sites that load, convert, and stay easy to update. Built in days, not quarters.</p></div>
+      <div class="service"><h3>SEO</h3><p>The long game, done properly. Content and technical work that compounds into organic leads you never pay per click for.</p></div>
+      <div class="service"><h3>Content &amp; storytelling</h3><p>The brand writing that makes cold outreach land warm and gives buyers a reason to trust you.</p></div>
+      <div class="service"><h3>Email flows &amp; nurture</h3><p>Signup-triggered sequences, newsletters, and warm follow-up that keep leads moving without someone chasing each one by hand.</p></div>
+      <div class="service"><h3>LinkedIn outreach</h3><p>Considered, brand-forward outreach on LinkedIn, wired into the same funnel as your email.</p></div>
+      <div class="service"><h3>Paid advertising</h3><p>Paid campaigns when they earn their place, measured against real pipeline rather than vanity clicks.</p></div>
+      <div class="service"><h3>CRM &amp; automation</h3><p>The pipeline plumbing behind the scenes, set up so leads never fall through the cracks.</p></div>
+      <div class="service"><h3>LLM search visibility</h3><p>Getting your brand cited by AI search and LLMs, where more of your buyers now start looking.</p></div>
+      <div class="service"><h3>Strategy &amp; consulting</h3><p>Where pipeline should come from, in what order, and what it's worth. The plan before the build.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Statistics">
+  <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stat"><div class="num">100%</div><div class="lab">primary-inbox deliverability, cold outbound using best practices</div></div>
+    <div class="stat"><div class="num">500K+</div><div class="lab">impressions and 12,000+ clicks for client brands</div></div>
+    <div class="stat"><div class="num">90%</div><div class="lab">cheaper lead scraping stack compared to other agencies</div></div>
+  </div>
+</section>
+
+<section class="sec" id="case">
+  <div class="wrap case">
+    <div class="marker"><span class="mono"># 07 · In practice</span></div>
+    <blockquote>The work speaks. The names stay private.</blockquote>
+    <p style="max-width:62ch">We keep client relationships confidential and talk about the work at the industry level. Here's the shape of it, without the logos.</p>
+    <div class="cards cases-4" style="margin-top:36px">
+      <div class="card">
+        <h3>F&amp;B and hospitality group</h3>
+        <p>Two venues and a B2B food and beverage company under one group. We work as their strategy and consulting arm: brand storytelling, content, web development, and the sales systems behind the operation.</p>
+      </div>
+      <div class="card">
+        <h3>Apparel brand</h3>
+        <p>A bootstrapped apparel brand doubled revenue in under a year and expanded from one location to three, built on search-first content and outbound, not ad spend.</p>
+      </div>
+      <div class="card">
+        <h3>Audio-production studio</h3>
+        <p>A studio needed a credible web presence fast, with no time to lose to a drawn-out agency process. We scoped, built, and shipped it in under two days.</p>
+      </div>
+      <div class="card">
+        <h3>B2B manufacturer</h3>
+        <p>A sustainable B2B manufacturer built its lead engine on ten years of consistent SEO storytelling and brand work: 98% of leads organic, around 1,500 visitors a month from search, converting through to sales at zero ad spend.</p>
+      </div>
+    </div>
+    <a class="after-link" href="#contact">Book a call to hear how these were built →</a>
+  </div>
+</section>
+
+<section class="sec panel" id="qualify">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 08 · Is this for you</span></div>
+    <div class="qual">
+      <div>
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You run an established business with real ticket sizes</li>
+          <li>Your sales motion depends on relationships you can't clone</li>
+          <li>You have a sales team ready to take qualified conversations</li>
+          <li>You want to own the system, not rent it</li>
+        </ul>
+      </div>
+      <div>
+        <h3>This is not for you if</h3>
+        <ul>
+          <li>You're pre-revenue</li>
+          <li>You want leads next week</li>
+          <li>You're shopping for the cheapest cold-email vendor</li>
+          <li>You're not ready to adapt to the digital age</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 09 · Questions</span></div>
+    <div style="max-width:820px">
+      <div class="faq-item">
+        <button aria-expanded="false">How fast do results come?</button>
+        <div class="faq-a"><p>Deliverability warm-up alone takes about eight weeks. Anyone promising qualified pipeline in two weeks is selling you an unsustainable system.</p></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false">Do you write emails with AI?</button>
+        <div class="faq-a"><p>We use AI as a tool, the same as any serious operator. What we don't do is fake personalization with over-the-top research of your entire background. We treat a cold email as a digital brochure: clean, brand-forward, and honest about what it is. The approach matters more than the tool.</p></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false">Who owns the system afterward?</button>
+        <div class="faq-a"><p>You do. Domains, inboxes, workspace, documentation, all handed over at the end of the build.</p></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false">Do you work globally?</button>
+        <div class="faq-a"><p>Yes. Our infrastructure is built in Asia Pacific; our clients are global. Wherever you are, book the call.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEAD / CONTACT FORM ===================== -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 10 · Book a call</span></div>
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <h2>Tell us what your problem is.</h2>
+        <p>Let us know your details and a note on what you're trying to fix. We read every message and request for a discovery call. No deck, no pitch.</p>
+      </div>
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <div class="field" id="f-name">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <div class="err">Please enter your name.</div>
+        </div>
+        <div class="field" id="f-company">
+          <label for="company">Company <span class="req">*</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" required>
+          <div class="err">Please enter your company.</div>
+        </div>
+        <div class="field" id="f-email">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <div class="err">Please enter a valid email address.</div>
+        </div>
+        <div class="field" id="f-note">
+          <label for="note">Note <span style="color:var(--ghost)">(optional)</span></label>
+          <textarea id="note" name="note" placeholder="What are you trying to fix?"></textarea>
+        </div>
+        <!-- honeypot: hidden from humans, bots fill it -->
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <button type="submit" class="btn" id="leadSubmit">Send &amp; book a call</button>
+        <p class="form-note">We reply within one business day. Your details go straight to the founders, nowhere else.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="final-crop" viewBox="0 0 220 320" aria-hidden="true"><use href="#hb-mark"/></svg>
+  <div class="wrap">
+    <h2>Stop talking to everyone. Start talking to buyers.</h2>
+    <p style="margin:32px 0 0"><a class="btn" style="background:#fff;color:var(--black)" href="#contact">Book a call</a></p>
+    <p class="micro">60 minute discovery call. We'll tell you in one call if this isn't a fit.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="fm">
+          <svg class="mark" viewBox="0 0 220 320" style="height:24px" aria-hidden="true"><use href="#hb-mark" fill="#FFFFFF"/></svg>
+          Hash Brown
+        </div>
+        <p>B2B outbound systems, built in Asia Pacific. The perfect side to your business.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="#system">The System</a><a href="#solutions">Solutions</a><a href="#qualify">Industries</a><a href="#pricing">Pricing</a><a href="#case">Case Studies</a><a href="#why">About</a><a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="#pricing">Done-For-You</a><a href="#pricing">Do-It-With-You</a><a href="#pricing">Consulting</a>
+      </div>
+      <div>
+        <h4>Founders</h4>
+        <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
+        <h4 style="margin-top:22px">Contact</h4>
+        <a href="#contact">Book a call</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Hash Brown</span>
+      <span><a href="privacy.html" style="display:inline;color:inherit">Privacy</a> · <a href="terms.html" style="display:inline;color:inherit">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a class="btn" href="#contact">Book a call</a></div>
+
+<script>
+/* ---- FAQ accordion ---- */
+document.querySelectorAll('.faq-item button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-item button').forEach(function(x){x.setAttribute('aria-expanded','false')});
+    b.setAttribute('aria-expanded',open?'false':'true');
+  });
+});
+
+/* ---- Mobile nav menu ---- */
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var links=document.getElementById('navLinks');
+  if(!toggle||!links)return;
+  toggle.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  // close menu after tapping a link
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+
+/* ---- Lead form ---- */
+(function(){
+  // ▼▼▼ PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BETWEEN THE QUOTES ▼▼▼
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyqWcmMV5EOmEuRDkJwHXD7Vic1Gd6Itdps8mwZ4V7h828yqhm6MnVwLfw6dc9XeXqj9Q/exec";
+  // ▲▲▲ (see DEPLOY-INSTRUCTIONS.md; until this is set, the form shows a friendly notice) ▲▲▲
+
+  var form=document.getElementById('leadForm');
+  if(!form)return;
+  var statusEl=document.getElementById('formStatus');
+  var submitBtn=document.getElementById('leadSubmit');
+  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Reference inputs by id; form.name would collide with the form's built-in .name property.
+  var elName=document.getElementById('name');
+  var elCompany=document.getElementById('company');
+  var elEmail=document.getElementById('email');
+  var elNote=document.getElementById('note');
+  var elHoney=document.getElementById('website');
+
+  function setInvalid(id,bad){
+    document.getElementById(id).classList.toggle('invalid',bad);
+  }
+  function showStatus(msg,ok){
+    statusEl.textContent=msg;
+    statusEl.className='form-status show '+(ok?'ok':'bad');
+  }
+
+  function validate(){
+    var name=elName.value.trim();
+    var company=elCompany.value.trim();
+    var email=elEmail.value.trim();
+    setInvalid('f-name',!name);
+    setInvalid('f-company',!company);
+    setInvalid('f-email',!emailRe.test(email));
+    return name && company && emailRe.test(email);
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    statusEl.className='form-status';
+    if(!validate())return;
+    // honeypot check
+    if(elHoney.value){return;}
+
+    if(!SCRIPT_URL){
+      showStatus("Form isn't connected yet. Add your Apps Script URL in index.html (see DEPLOY-INSTRUCTIONS.md), or email hashbrownconsulting@gmail.com.",false);
+      return;
+    }
+
+    submitBtn.disabled=true;
+    submitBtn.textContent='Sending…';
+
+    var body=new URLSearchParams();
+    body.append('name',elName.value.trim());
+    body.append('company',elCompany.value.trim());
+    body.append('email',elEmail.value.trim());
+    body.append('note',elNote.value.trim());
+    body.append('page',location.href);
+
+    fetch(SCRIPT_URL,{method:'POST',body:body})
+      .then(function(r){return r.json()})
+      .then(function(data){
+        if(data && data.result==='success'){
+          form.reset();
+          showStatus("Thanks, we've got your details. A founder will reply within one business day.",true);
+        }else{
+          throw new Error(data && data.message||'Unknown error');
+        }
+      })
+      .catch(function(){
+        showStatus("Something went wrong sending your message. Please email hashbrownconsulting@gmail.com and we'll pick it up.",false);
+      })
+      .finally(function(){
+        submitBtn.disabled=false;
+        submitBtn.textContent='Send & book a call';
+      });
+  });
+})();
+</script>
+</body>
+</html>

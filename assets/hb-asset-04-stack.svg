@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 640" width="420" height="640" role="img" aria-label="Five stacked geometric bands narrowing from top to bottom: arched inboxes, a dome over scalloped edges, a field of circles with one cut cell, stepping quarter circles, and a single arch at the base">
+  <rect width="420" height="640" fill="#F3F3F3"/>
+
+  <!-- 01 · Domains & inboxes — widest -->
+  <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4" transform="translate(30,40)">
+    <path d="M0,100 L0,45 A30,30 0 0 1 60,45 L60,100 Z"/>
+    <path d="M60,100 L60,30 A30,30 0 0 1 120,30 L120,100 Z"/>
+    <path d="M120,100 L120,20 A30,30 0 0 1 180,20 L180,100 Z"/>
+    <path d="M180,100 L180,30 A30,30 0 0 1 240,30 L240,100 Z"/>
+    <path d="M240,100 L240,45 A30,30 0 0 1 300,45 L300,100 Z"/>
+    <path d="M300,100 L300,55 A30,30 0 0 1 360,55 L360,100 Z"/>
+  </g>
+
+  <!-- 02 · Warm-up & deliverability -->
+  <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4" transform="translate(55,160)">
+    <path d="M85,60 A85,85 0 0 1 255,60 Z"/>
+    <path d="M0,100 L0,75 A25,25 0 0 1 50,75 L50,100 Z"/>
+    <path d="M50,100 L50,75 A25,25 0 0 1 100,75 L100,100 Z"/>
+    <path d="M100,100 L100,75 A25,25 0 0 1 150,75 L150,100 Z"/>
+    <path d="M150,100 L150,75 A25,25 0 0 1 200,75 L200,100 Z"/>
+    <path d="M200,100 L200,75 A25,25 0 0 1 250,75 L250,100 Z"/>
+    <path d="M250,100 L250,75 A25,25 0 0 1 300,75 L300,100 Z"/>
+  </g>
+
+  <!-- 03 · Lead data & segmentation -->
+  <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4" transform="translate(80,280)">
+    <circle cx="30" cy="30" r="30"/><circle cx="90" cy="30" r="30"/>
+    <circle cx="150" cy="30" r="30"/><circle cx="210" cy="30" r="30"/>
+    <circle cx="30" cy="90" r="30"/><circle cx="90" cy="90" r="30"/>
+    <path d="M120,60 L180,60 L120,120 Z"/>
+    <path d="M240,120 L180,120 L240,60 Z"/>
+  </g>
+
+  <!-- 04 · Sequencing -->
+  <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4" transform="translate(110,410)">
+    <path d="M0,0 L60,0 A60,60 0 0 1 0,60 Z"/>
+    <path d="M55,25 L115,25 A60,60 0 0 1 55,85 Z"/>
+    <path d="M110,50 L170,50 A60,60 0 0 1 110,110 Z"/>
+  </g>
+
+  <!-- 05 · Reply handling — one qualified form -->
+  <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4" transform="translate(155,545)">
+    <path d="M0,60 L0,30 A55,55 0 0 1 110,30 L110,60 Z"/>
+  </g>
+
+  <!-- funnel guides -->
+  <g stroke="#9696A1" stroke-width="1" fill="none">
+    <line x1="30" y1="150" x2="55" y2="152"/>
+    <line x1="390" y1="150" x2="365" y2="152"/>
+    <line x1="55" y1="270" x2="80" y2="272"/>
+    <line x1="365" y1="270" x2="340" y2="272"/>
+    <line x1="80" y1="400" x2="110" y2="402"/>
+    <line x1="340" y1="400" x2="310" y2="402"/>
+    <line x1="110" y1="530" x2="155" y2="535"/>
+    <line x1="310" y1="530" x2="265" y2="535"/>
+  </g>
+</svg>

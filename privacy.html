@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy · Hash Brown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="hb-mark" d="M110,6 C130,2 148,10 158,16 C176,10 196,24 194,44 C206,52 212,66 208,82 C214,96 210,112 206,124 C214,138 212,156 206,168 C214,182 212,200 206,212 C212,226 210,244 202,254 C206,272 194,288 178,290 C170,306 150,314 134,308 C120,318 98,318 84,308 C66,314 46,306 40,290 C22,288 10,272 16,254 C6,244 6,226 12,212 C4,200 4,182 12,168 C4,156 4,138 12,124 C6,112 4,96 12,82 C6,66 14,52 26,44 C24,24 44,10 62,16 C74,8 92,2 110,6 Z"/>
+  </defs>
+</svg>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="index.html">
+      <svg class="mark" viewBox="0 0 220 320" style="height:26px" aria-hidden="true"><use href="#hb-mark" fill="#111113"/></svg>
+      Hash Brown
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#system">The System</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#case">Case Studies</a>
+      <a href="index.html#why">About</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn" href="index.html#contact">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="legal-page">
+    <a class="back-link" href="index.html">← Home</a>
+    <h1>Privacy Policy</h1>
+    <p class="mono">Last updated: July 2026</p>
+
+    <h2>What we collect</h2>
+    <p>If you submit the contact form, we collect the name, company, email address, and any note you provide. We collect this only because you chose to send it to us.</p>
+
+    <h2>How we use it</h2>
+    <p>We use your details for one thing: to reply to you and, where relevant, to arrange a call. Submissions are stored in a private Google Sheet and emailed to the founders. We do not sell your information or share it with third parties for their marketing.</p>
+
+    <h2>How long we keep it</h2>
+    <p>We keep enquiry details for as long as needed to follow up and maintain our records. Ask us to delete yours at any time and we will.</p>
+
+    <h2>Your choices</h2>
+    <p>You can ask what we hold about you, ask us to correct it, or ask us to delete it. Email us and we'll handle it.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:hashbrownconsulting@gmail.com">hashbrownconsulting@gmail.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legal" style="border-top:0">
+      <span>© 2026 Hash Brown</span>
+      <span><a href="privacy.html" style="display:inline;color:inherit">Privacy</a> · <a href="terms.html" style="display:inline;color:inherit">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');if(t&&l)t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "hello-outbound",
+    "title": "Why most outbound fails before the first email sends",
+    "date": "2026-07-20",
+    "author": "Tom",
+    "excerpt": "The part everyone skips is the part that decides whether anything gets read. A short note on deliverability, warm-up, and the eight weeks nobody wants to hear about."
+  }
+]

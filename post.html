@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Brown · Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="hb-mark" d="M110,6 C130,2 148,10 158,16 C176,10 196,24 194,44 C206,52 212,66 208,82 C214,96 210,112 206,124 C214,138 212,156 206,168 C214,182 212,200 206,212 C212,226 210,244 202,254 C206,272 194,288 178,290 C170,306 150,314 134,308 C120,318 98,318 84,308 C66,314 46,306 40,290 C22,288 10,272 16,254 C6,244 6,226 12,212 C4,200 4,182 12,168 C4,156 4,138 12,124 C6,112 4,96 12,82 C6,66 14,52 26,44 C24,24 44,10 62,16 C74,8 92,2 110,6 Z"/>
+  </defs>
+</svg>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="index.html">
+      <svg class="mark" viewBox="0 0 220 320" style="height:26px" aria-hidden="true"><use href="#hb-mark" fill="#111113"/></svg>
+      Hash Brown
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#system">The System</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#qualify">Industries</a>
+      <a href="index.html#case">Case Studies</a>
+      <a href="index.html#why">About</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn" href="index.html#contact">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <article class="article">
+    <a class="back-link" href="blog.html">← All posts</a>
+    <div class="a-meta" id="postMeta"></div>
+    <h1 id="postTitle">Loading…</h1>
+    <div class="prose" id="postBody"></div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="fm">
+          <svg class="mark" viewBox="0 0 220 320" style="height:24px" aria-hidden="true"><use href="#hb-mark" fill="#FFFFFF"/></svg>
+          Hash Brown
+        </div>
+        <p>B2B outbound systems, built in Asia Pacific. The perfect side to your business.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="index.html#system">The System</a><a href="index.html#solutions">Solutions</a><a href="index.html#qualify">Industries</a><a href="index.html#case">Case Studies</a><a href="index.html#why">About</a><a href="blog.html">Blog</a><a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="index.html#solutions">Done-For-You</a><a href="index.html#solutions">Do-It-With-You</a><a href="index.html#solutions">Consulting</a>
+      </div>
+      <div>
+        <h4>Founders</h4>
+        <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
+        <h4 style="margin-top:22px">Contact</h4>
+        <a href="index.html#contact">Book a call</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Hash Brown</span>
+      <span><a href="privacy.html" style="display:inline;color:inherit">Privacy</a> · <a href="terms.html" style="display:inline;color:inherit">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+/* Mobile nav */
+(function(){
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  if(t&&l)t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+})();
+
+/* Render a single post from ?slug= */
+(function(){
+  var titleEl=document.getElementById('postTitle');
+  var metaEl=document.getElementById('postMeta');
+  var bodyEl=document.getElementById('postBody');
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function fmtDate(d){var dt=new Date(d+'T00:00:00');return isNaN(dt)?d:dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+  function fail(msg){titleEl.textContent='Post not found';bodyEl.innerHTML='<p>'+esc(msg)+'</p><p><a href="blog.html">← Back to all posts</a></p>';}
+
+  var slug=new URLSearchParams(location.search).get('slug');
+  if(!slug){fail('No post specified.');return;}
+  // guard against path traversal in the slug
+  if(!/^[a-z0-9\-]+$/i.test(slug)){fail('Invalid post.');return;}
+
+  var meta=null;
+  fetch('posts.json',{cache:'no-store'})
+    .then(function(r){return r.ok?r.json():[];})
+    .then(function(posts){
+      meta=(posts||[]).find(function(p){return p.slug===slug;});
+      return fetch('posts/'+slug+'.md',{cache:'no-store'});
+    })
+    .then(function(r){if(!r.ok)throw new Error();return r.text();})
+    .then(function(md){
+      var title=meta&&meta.title?meta.title:slug;
+      document.title='Hash Brown · '+title;
+      titleEl.textContent=title;
+      if(meta){metaEl.textContent=fmtDate(meta.date)+(meta.author?' · '+meta.author:'');}
+      bodyEl.innerHTML=marked.parse(md);
+    })
+    .catch(function(){fail('We couldn’t load this post. (The blog needs to run on a web host such as GitHub Pages.)');});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="Five identical four-petal forms in a row, transitioning from fully solid black at the left to fully outlined at the right, representing a system built by Hash Brown and handed over to the client">
+  <defs>
+    <path id="pTL" d="M70,70 L0,70 A70,70 0 0 1 70,0 Z"/>
+    <path id="pTR" d="M70,70 L140,70 A70,70 0 0 0 70,0 Z"/>
+    <path id="pBL" d="M70,70 L0,70 A70,70 0 0 0 70,140 Z"/>
+    <path id="pBR" d="M70,70 L140,70 A70,70 0 0 1 70,140 Z"/>
+  </defs>
+
+  <rect width="900" height="260" fill="#F3F3F3"/>
+
+  <!-- 01 — fully built -->
+  <g transform="translate(30,60)" fill="#111113" stroke="#F3F3F3" stroke-width="1.4">
+    <use href="#pTL"/><use href="#pTR"/><use href="#pBL"/><use href="#pBR"/>
+  </g>
+
+  <!-- 02 -->
+  <g transform="translate(205,60)">
+    <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4">
+      <use href="#pTL"/><use href="#pBL"/><use href="#pBR"/>
+    </g>
+    <use href="#pTR" fill="none" stroke="#111113" stroke-width="2.4"/>
+  </g>
+
+  <!-- 03 -->
+  <g transform="translate(380,60)">
+    <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4">
+      <use href="#pTL"/><use href="#pBR"/>
+    </g>
+    <g fill="none" stroke="#111113" stroke-width="2.4">
+      <use href="#pTR"/><use href="#pBL"/>
+    </g>
+  </g>
+
+  <!-- 04 -->
+  <g transform="translate(555,60)">
+    <g fill="#111113" stroke="#F3F3F3" stroke-width="1.4">
+      <use href="#pBR"/>
+    </g>
+    <g fill="none" stroke="#111113" stroke-width="2.4">
+      <use href="#pTL"/><use href="#pTR"/><use href="#pBL"/>
+    </g>
+  </g>
+
+  <!-- 05 — fully yours -->
+  <g transform="translate(730,60)" fill="none" stroke="#111113" stroke-width="2.4">
+    <use href="#pTL"/><use href="#pTR"/><use href="#pBL"/><use href="#pBR"/>
+  </g>
+
+  <!-- connecting baseline -->
+  <line x1="30" y1="228" x2="870" y2="228" stroke="#9696A1" stroke-width="1"/>
+</svg>
