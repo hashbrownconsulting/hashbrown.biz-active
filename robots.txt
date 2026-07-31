@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /blog.html
+Disallow: /post.html
+Disallow: /posts/
+Disallow: /google-apps-script/
+
+Sitemap: https://hashbrown.biz/sitemap.xml
