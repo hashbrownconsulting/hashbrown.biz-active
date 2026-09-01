@@ -1,0 +1,29 @@
+---
+title: How Long Does Cold Email Warm-Up Actually Take?
+slug: cold-email-warm-up-how-long
+date: 2026-09-03
+author: Tom
+meta_title: How Long Does Cold Email Warm-Up Actually Take?
+description: The volume ramp takes three to four weeks. The runway from registering a sending domain to sending campaigns that matter is closer to eight. Here is what happens in each of them.
+excerpt: The ramp takes three to four weeks. The runway from registering a domain to sending anything that matters is closer to eight. Those are two different questions, and the tools answer the first one when you asked the second.
+---
+
+The volume ramp takes three to four weeks. The full runway from registering a sending domain to running campaigns that matter is closer to eight. Those are two different questions, and most warm-up tools answer the first one when what you asked was the second. If someone quotes you two weeks, they are quoting the ramp and quietly leaving out everything either side of it.
+
+Here is how it usually goes wrong. A founder buys a sending tool, connects two new inboxes, clicks the button marked start warm-up, and waits the fortnight the interface suggests. On day fifteen they load a list of three thousand contacts and set the daily limit to two hundred per inbox. For about ten days the numbers look fine. Then open rates fall off a cliff, replies stop, and the domain never really recovers. Nothing in the tool warned them, because the tool was measuring the only thing it can measure, which is whether its own warm-up emails got opened by its own network.
+
+What is actually happening during warm-up is that the major mailbox providers are building a reputation score for your sending domain and for each individual inbox on it. That score is not a single number and it is not visible to you. It is assembled from how much you send, how consistently, how many recipients bounce, how many mark you as spam, how many engage, and how all of that compares to what a domain of your age and volume normally looks like. A brand new domain sending at volume on day one does not look like a business. It looks like somebody who bought a domain yesterday to send a lot of mail, because that is exactly what it is.
+
+The ramp itself is a schedule, not a switch. Five to ten plain text emails per inbox for the first week. Fifteen to twenty five in the second. Thirty to fifty by the middle of the third. Seventy five to a hundred by the end of it if you are on a high trust provider, and under fifty a day permanently if you are not. Those numbers are per inbox, which is why volume comes from more inboxes rather than from pushing any single one harder. The rule underneath all of it is that you never jump. A domain that goes from ten to a hundred overnight has told the providers something about itself that takes months to unsay.
+
+The week before the ramp is the one nobody counts. You need the sending domains registered and ideally aged a little before they send anything. You need DNS records propagated, SPF, DKIM and DMARC set correctly rather than mostly, and a custom tracking domain so your links do not resolve through a shared subdomain that thousands of other senders have already burned. You need the mailboxes provisioned and the forwarding and signatures in place, so an inbox that receives a reply looks like a real person's inbox rather than a shell. None of this is difficult. All of it takes days, and every one of those days happens before the counter in your warm-up tool starts.
+
+The weeks after the ramp are the ones people assume are over. They are not. Your first live campaign is still part of warm-up, because live sends are the first time real bounce rates and real complaint rates hit your reputation. A ramp built on warm-up network mail proves nothing about how a cold list behaves. This is why the list matters as much as the schedule: one unverified batch with a five percent bounce rate will undo three weeks of careful ramping in an afternoon, and you will not be able to tell from the dashboard whether it was the copy, the list or the infrastructure.
+
+You can usually tell which part failed by the shape of the failure. Good numbers for ten days and then a permanent drop is a ramp that went too fast. Consistently landing in Promotions rather than the primary inbox is authentication or a tracking domain problem, not a copy problem. A sudden bounce spike from a list that looked fine in the spreadsheet is data. Open rates that look healthy while nobody ever replies are often not open rates at all, because image prefetching by mailbox providers inflates them, which is a good reason not to steer by that number in the first place.
+
+We build the whole thing in roughly eight weeks including warm-up, and we build it inside your accounts so the domains, the inboxes and the reputation belong to you rather than to us. Across the campaigns we run we hold 100% primary-inbox deliverability using best practices. That is not a technique. It is the arithmetic of doing the first two [layers of the system](/blog/five-layers-b2b-outbound-system/) properly and refusing to start the third one early.
+
+The honest version is that eight weeks is the cost of entry and there is no version of this that goes faster. Anyone offering you qualified pipeline in a fortnight is either counting from a domain that was already warm, which is fine if it is yours and not fine if it is a shared pool, or selling you a domain that will be burned by the time you notice. You are buying a sending asset. Assets take time to build and then they keep working, which is the part that makes the eight weeks worth waiting through.
+
+If you are somewhere in the middle of this and the numbers have gone strange, [book a call](/#contact). Sixty minutes, no pitch, and we will tell you which week it broke in.
