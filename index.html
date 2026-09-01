@@ -10,9 +10,37 @@
   <link rel="icon" type="image/x-icon" href="https://hashbrown.biz/favicon.ico">
   <link rel="apple-touch-icon" href="https://hashbrown.biz/icon-192.png">
   <link rel="canonical" href="https://hashbrown.biz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hash Brown">
+  <meta property="og:title" content="Hash Brown: B2B Outbound Systems Agency | Asia Pacific">
+  <meta property="og:description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+  <meta property="og:url" content="https://hashbrown.biz/">
+  <meta property="og:image" content="https://hashbrown.biz/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hash Brown: B2B Outbound Systems Agency | Asia Pacific">
+  <meta name="twitter:description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+  <meta name="twitter:image" content="https://hashbrown.biz/icon-512.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Hash Brown",
+    "url": "https://hashbrown.biz/",
+    "logo": "https://hashbrown.biz/icon-512.png",
+    "description": "B2B outbound systems agency: email, LinkedIn, and the funnel between. Built in Asia Pacific.",
+    "areaServed": "Asia Pacific",
+    "sameAs": [
+      "https://www.linkedin.com/in/monty-hasan/",
+      "https://www.linkedin.com/in/thomas-brown-33775912b/"
+    ]
+  }
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
 <style>
 /* ---- home-page-only styles ---- */
 .hero{padding:clamp(72px,10vw,140px) 0 clamp(48px,7vw,96px);overflow:hidden;position:relative}
@@ -20,7 +48,7 @@
 .hero h1{font-size:clamp(40px,6.4vw,84px);max-width:14ch;position:relative;z-index:2}
 .hero-sub{max-width:56ch;margin:32px 0 36px;font-size:clamp(16px,1.4vw,19px);position:relative;z-index:2}
 .hero-crop{position:absolute;right:-4%;top:-18%;z-index:1;pointer-events:none;width:clamp(340px,38vw,600px);opacity:1}
-.hero-crop path{fill:var(--panel)}
+.hero-crop use{fill:var(--panel)}
 @media(max-width:700px){.hero-crop{display:none}.final-crop{display:none}}
 .proof{border-bottom:1px solid var(--rule);padding:26px 0;background:var(--paper)}
 .logo-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
@@ -83,7 +111,7 @@
 .final h2{color:#fff;font-size:clamp(34px,5vw,64px);max-width:16ch}
 .final .micro{color:#8B8B93}
 .final-crop{position:absolute;right:-6%;top:-24%;width:clamp(320px,34vw,540px);pointer-events:none}
-.final-crop path{fill:#1D1D21}
+.final-crop use{fill:#1D1D21}
 .price-notes-box{border:1px solid var(--rule);background:var(--paper);padding:24px 28px;margin-top:28px;max-width:none}
 .price-notes-box p{font-size:13.5px;color:var(--ghost)}
 .price-notes-box p+p{margin-top:12px}
@@ -124,6 +152,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#case">Case Studies</a>
       <a href="#why">About</a>
+      <a href="blog.html">Blog</a>
       <a class="btn" href="#contact">Book a call</a>
     </div>
   </div>
@@ -149,17 +178,17 @@
   <div class="wrap">
     <p class="mono">Built with and for</p>
     <div class="logo-row">
-      <div class="logo-slot"><img src="assets/logos/topiku.png" alt="Topiku"></div>
-      <div class="logo-slot"><img src="assets/logos/asasi.png" alt="Asasi"></div>
-      <div class="logo-slot"><img src="assets/logos/vocom.png" alt="Vocom"></div>
-      <div class="logo-slot"><img src="assets/logos/basho.png" alt="Basho Projects"></div>
-      <div class="logo-slot"><img src="assets/logos/bebop.png" alt="Bebop"></div>
-      <div class="logo-slot"><img src="assets/logos/briq.png" alt="Briq Bistro"></div>
-      <div class="logo-slot"><img src="assets/logos/brock.png" alt="Brock Butchery"></div>
-      <div class="logo-slot"><img src="assets/logos/bubble-bros.png" alt="Bubble Bros"></div>
-      <div class="logo-slot"><img src="assets/logos/bubble-squeak.png" alt="Bubble &amp; Squeak"></div>
-      <div class="logo-slot"><img src="assets/logos/crypto-pills-gaming.png" alt="Crypto Pills Gaming Company"></div>
-      <div class="logo-slot"><img src="assets/logos/client-03.png" alt="Client logo"></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/topiku.webp" type="image/webp"><img src="assets/logos/topiku.png" alt="Topiku" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/asasi.webp" type="image/webp"><img src="assets/logos/asasi.png" alt="Asasi" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/vocom.webp" type="image/webp"><img src="assets/logos/vocom.png" alt="Vocom" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/basho.webp" type="image/webp"><img src="assets/logos/basho.png" alt="Basho Projects" loading="lazy" width="320" height="93"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/bebop.webp" type="image/webp"><img src="assets/logos/bebop.png" alt="Bebop" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/briq.webp" type="image/webp"><img src="assets/logos/briq.png" alt="Briq Bistro" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/brock.webp" type="image/webp"><img src="assets/logos/brock.png" alt="Brock Butchery" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/bubble-bros.webp" type="image/webp"><img src="assets/logos/bubble-bros.png" alt="Bubble Bros" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/bubble-squeak.webp" type="image/webp"><img src="assets/logos/bubble-squeak.png" alt="Bubble &amp; Squeak" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/crypto-pills-gaming.webp" type="image/webp"><img src="assets/logos/crypto-pills-gaming.png" alt="Crypto Pills Gaming Company" loading="lazy" width="200" height="200"></picture></div>
+      <div class="logo-slot"><picture><source srcset="assets/logos/client-03.webp" type="image/webp"><img src="assets/logos/client-03.png" alt="Client logo" loading="lazy" width="200" height="200"></picture></div>
     </div>
   </div>
 </section>
@@ -273,8 +302,8 @@
         <p>When you work with Hash Brown you work with Monty and Tom. Not an account manager reading your file, not a pod, not a platform. Two people who build the system, watch it run, and answer their own phone.</p>
       </div>
       <div class="img founders-img">
-        <figure><img src="assets/founders/monty-bw.jpg" alt="Monty, co-founder"><figcaption>Monty</figcaption></figure>
-        <figure><img src="assets/founders/tom-bw.jpg" alt="Tom, co-founder"><figcaption>Tom</figcaption></figure>
+        <figure><picture><source srcset="assets/founders/monty-bw.webp" type="image/webp"><img src="assets/founders/monty-bw.jpg" alt="Monty, co-founder" loading="lazy" width="600" height="600"></picture><figcaption>Monty</figcaption></figure>
+        <figure><picture><source srcset="assets/founders/tom-bw.webp" type="image/webp"><img src="assets/founders/tom-bw.jpg" alt="Tom, co-founder" loading="lazy" width="600" height="600"></picture><figcaption>Tom</figcaption></figure>
       </div>
     </div>
     <div class="why">
@@ -502,7 +531,7 @@
       </div>
       <div>
         <h4>Site</h4>
-        <a href="#system">The System</a><a href="#solutions">Solutions</a><a href="#qualify">Industries</a><a href="#pricing">Pricing</a><a href="#case">Case Studies</a><a href="#why">About</a><a href="#faq">FAQ</a>
+        <a href="#system">The System</a><a href="#solutions">Solutions</a><a href="#qualify">Industries</a><a href="#pricing">Pricing</a><a href="#case">Case Studies</a><a href="#why">About</a><a href="blog.html">Blog</a><a href="#faq">FAQ</a>
       </div>
       <div>
         <h4>Solutions</h4>
