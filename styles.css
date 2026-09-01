@@ -23,7 +23,7 @@ h2{font-size:clamp(28px,4vw,44px)}
 .btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--black);outline-offset:3px}
 .micro{font-size:13px;color:var(--ghost);margin-top:10px}
 .mark{display:inline-block;vertical-align:middle}
-picture{display:block}
+picture{display:contents}
 
 /* NAV */
 nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);z-index:50}
