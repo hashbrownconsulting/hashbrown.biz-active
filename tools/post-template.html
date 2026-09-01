@@ -11,19 +11,44 @@
   gtag("config", "G-3Z1DHNXWMV");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog · Hash Brown</title>
-<meta name="description" content="Notes on B2B outbound systems, deliverability, and owning your pipeline. From the founders of Hash Brown.">
-<link rel="canonical" href="https://hashbrown.biz/blog/">
-<meta property="og:type" content="website">
+<title>{{META_TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="https://hashbrown.biz/blog/{{SLUG}}/">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="Hash Brown">
-<meta property="og:title" content="Hash Brown · Blog">
-<meta property="og:description" content="Notes on B2B outbound systems, deliverability, and owning your pipeline. From the founders of Hash Brown.">
-<meta property="og:url" content="https://hashbrown.biz/blog/">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="https://hashbrown.biz/blog/{{SLUG}}/">
 <meta property="og:image" content="https://hashbrown.biz/icon-512.png">
+<meta property="article:published_time" content="{{DATE}}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hash Brown · Blog">
-<meta name="twitter:description" content="Notes on B2B outbound systems, deliverability, and owning your pipeline. From the founders of Hash Brown.">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
 <meta name="twitter:image" content="https://hashbrown.biz/icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{TITLE}}",
+  "description": "{{DESCRIPTION}}",
+  "datePublished": "{{DATE}}",
+  "dateModified": "{{DATE}}",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hashbrown.biz/blog/{{SLUG}}/"},
+  "author": {"@type": "Person", "name": "{{AUTHOR}}", "url": "{{AUTHOR_URL}}"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hash Brown",
+    "url": "https://hashbrown.biz/",
+    "logo": {"@type": "ImageObject", "url": "https://hashbrown.biz/icon-512.png"}
+  },
+  "image": "https://hashbrown.biz/icon-512.png",
+  "inLanguage": "en"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -62,19 +87,16 @@
   </div>
 </nav>
 
-<header class="page-head">
-  <div class="wrap">
-    <p class="mono"># The Hash Brown blog</p>
-    <h1 style="margin-top:18px">Notes on outbound that actually works.</h1>
-    <p>Deliverability, systems, and owning your own pipeline. Written by the founders, no ghostwriters.</p>
-  </div>
-</header>
-
-<div class="wrap">
-  <div class="post-list" id="postList">
-    <div class="loading">Loading posts…</div>
-  </div>
-</div>
+<main class="wrap">
+  <article class="article">
+    <a class="back-link" href="/blog/">&larr; All posts</a>
+    <div class="a-meta">{{DATE_HUMAN}} &middot; {{AUTHOR}}</div>
+    <h1>{{TITLE}}</h1>
+    <div class="prose">
+{{BODY}}
+    </div>
+  </article>
+</main>
 
 <footer>
   <div class="wrap">
@@ -96,54 +118,22 @@
       </div>
       <div>
         <h4>Founders</h4>
-        <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
+        <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty &middot; LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom &middot; LinkedIn</a>
         <h4 style="margin-top:22px">Contact</h4>
         <a href="/#contact">Book a call</a>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 Hash Brown</span>
-      <span><a href="/privacy/" style="display:inline;color:inherit">Privacy</a> · <a href="/terms/" style="display:inline;color:inherit">Terms</a></span>
+      <span>&copy; 2026 Hash Brown</span>
+      <span><a href="/privacy/" style="display:inline;color:inherit">Privacy</a> &middot; <a href="/terms/" style="display:inline;color:inherit">Terms</a></span>
     </div>
   </div>
 </footer>
 
 <script>
-/* Mobile nav */
 (function(){
   var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
   if(t&&l)t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
-})();
-
-/* Build the post list from posts.json */
-(function(){
-  var list=document.getElementById('postList');
-  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function fmtDate(d){
-    var dt=new Date(d+'T00:00:00');
-    if(isNaN(dt))return d;
-    return dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-  }
-  fetch('/posts.json',{cache:'no-store'})
-    .then(function(r){if(!r.ok)throw new Error();return r.json();})
-    .then(function(posts){
-      if(!Array.isArray(posts)||!posts.length){
-        list.innerHTML='<div class="empty">No posts yet. Check back soon.</div>';
-        return;
-      }
-      posts.sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
-      list.innerHTML=posts.map(function(p){
-        return '<a class="post-card" href="/blog/'+encodeURIComponent(p.slug)+'/">'
-          +'<span class="pc-meta">'+esc(fmtDate(p.date))+(p.author?' · '+esc(p.author):'')+'</span>'
-          +'<h3>'+esc(p.title)+'</h3>'
-          +'<p>'+esc(p.excerpt||'')+'</p>'
-          +'<span class="pc-more">Read →</span>'
-          +'</a>';
-      }).join('');
-    })
-    .catch(function(){
-      list.innerHTML='<div class="empty">Couldn’t load posts. (The blog needs to run on a web host, e.g. GitHub Pages; it won’t load from a file opened directly.)</div>';
-    });
 })();
 </script>
 </body>

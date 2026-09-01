@@ -1,5 +1,12 @@
 [
   {
+    "slug": "five-layers-b2b-outbound-system",
+    "title": "The Five Layers of a B2B Outbound System, and Where They Break",
+    "date": "2026-09-01",
+    "author": "Tom",
+    "excerpt": "Domains, warm-up, lead data, sequencing, reply handling. Four right and one wrong and the whole thing underperforms, and you will not know which layer did it. Here is the failure mode for each."
+  },
+  {
     "slug": "hello-outbound",
     "title": "Why most outbound fails before the first email sends",
     "date": "2026-07-20",

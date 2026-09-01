@@ -106,28 +106,57 @@ the repo or the custom domain disconnects.
 
 ---
 
-## 3. Add a blog post (no redeploy of the site logic)
+## 3. Add a blog post
 
-Adding a post is two small files — commit them and GitHub Pages publishes automatically.
+Posts are written once, in Markdown, and compiled to fully static HTML. The article text
+has to be baked into the page: fetching it at runtime made the words invisible to Google,
+because `robots.txt` disallows `/posts/`.
 
-1. Write the post as Markdown and save it in `posts/`, e.g. `posts/my-post.md`.
-2. Open `posts.json` and add an entry at the **top** of the list:
-   ```json
-   {
-     "slug": "my-post",
-     "title": "My post title",
-     "date": "2026-08-01",
-     "author": "Tom",
-     "excerpt": "One or two sentences shown on the blog index."
-   }
+1. Create `posts/your-slug.md` with front matter at the top:
+
    ```
-   - `slug` must match the filename without `.md` (`my-post` → `posts/my-post.md`).
-   - `date` is `YYYY-MM-DD`. Posts show newest first automatically.
-3. Commit both files. That's it — no code changes, no rebuild.
+   ---
+   title: The headline, sentence or title case, as it appears on the page
+   slug: your-slug
+   date: 2026-09-08
+   author: Tom
+   meta_title: Under 60 characters, for the browser tab and Google
+   description: 140 to 160 characters. This is the Google snippet.
+   excerpt: One or two sentences. This is the card on /blog/.
+   ---
 
-See `posts/hello-outbound.md` + its entry in `posts.json` as a working example.
+   Body in Markdown.
+   ```
 
----
+2. Run the build:
+
+   ```
+   python3 tools/build-blog.py
+   ```
+
+   That writes `blog/<slug>/index.html` (static text, canonical, Open Graph, BlogPosting
+   schema) and regenerates `posts.json` and `sitemap.xml`.
+
+3. Commit and push. GitHub Pages publishes automatically.
+
+4. In Google Search Console, use **URL Inspection** on the new post and click
+   **Request Indexing**. This is what turns days into hours.
+
+House rules the build enforces or you must check by hand:
+
+- No em dashes or en dashes. The build strips any the Markdown renderer introduces.
+- Never name the backend tooling. Say "our proprietary Enterprise database/backend".
+- Never put "no retainer" language next to a monthly price.
+- Two or three internal links per post, at least one to a commercial section.
+
+Before pushing, run the checks:
+
+```
+grep -rn '—\|–' --include=*.html --include=*.md .
+grep -rni 'findylead\|zapmail\|mailin\|no retainer' --include=*.html --include=*.md .
+```
+
+Both should return nothing.
 
 ## Things to swap in when you have them
 

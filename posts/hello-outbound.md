@@ -1,3 +1,13 @@
+---
+title: Why most outbound fails before the first email sends
+slug: hello-outbound
+date: 2026-07-20
+author: Tom
+meta_title: Why Most Outbound Fails Before the First Email Sends
+description: The part everyone skips is the part that decides whether anything gets read. A short note on cold email deliverability, domain warm-up, and the eight weeks nobody wants to hear about.
+excerpt: The part everyone skips is the part that decides whether anything gets read. A short note on deliverability, warm-up, and the eight weeks nobody wants to hear about.
+---
+
 Most outbound doesn't fail because the copy was weak. It fails because nobody ever saw it.
 
 You can write the sharpest email of your life. If it lands in spam, or worse, if it never lands at all because the domain was cold and the mailbox provider quietly binned it, the copy was never the variable. The infrastructure was.
@@ -25,4 +35,4 @@ Get those right and your open rates stop being a mystery. Get one wrong and you'
 
 Outbound is a system, not a tactic. Every layer has to work, and the first layer, the boring one, is the one that decides whether anyone reads the rest. Build it in the right order and it runs. Skip the boring part and nothing downstream can save you.
 
-If you want the system built properly, and built in your house so you keep the keys, [book a call](index.html#contact). Thirty minutes, no pitch. We'll tell you in one call whether outbound is even your problem.
+If you want the system built properly, and built in your house so you keep the keys, [book a call](/#contact). Sixty minutes, no pitch. We'll tell you in one call whether outbound is even your problem.
