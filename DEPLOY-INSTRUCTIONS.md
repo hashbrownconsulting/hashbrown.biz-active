@@ -9,7 +9,9 @@ Everything here is a static site, so it runs on **GitHub Pages** for free. Two t
 The form needs a tiny backend to write to your Google Sheet and email you. We use Google Apps Script — free, lives on your sheet, no third-party service.
 
 1. Open your leads spreadsheet:
-   https://docs.google.com/spreadsheets/d/1CGiIlH6buMuhllyaoDurrQCBa3UAuPctwmhFEFb-Mj4/edit
+   The Hash Brown "Leads" spreadsheet in the hashbrownconsulting Google Drive.
+   (The direct URL is deliberately not written here: GitHub Pages serves every file in
+   this repo, so anything in this document is public at hashbrown.biz/DEPLOY-INSTRUCTIONS.md.)
 2. Menu: **Extensions → Apps Script**. A code editor opens in a new tab.
 3. Delete whatever is in the `Code.gs` file, then paste the **entire contents** of
    `google-apps-script/Code.gs` (in this folder). Click the **Save** icon.
