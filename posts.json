@@ -1,10 +1,31 @@
 [
   {
+    "slug": "cold-outreach-guide",
+    "title": "Cold Outreach: A Plain Guide To Doing It Properly",
+    "date": "2026-10-20",
+    "author": "Tom",
+    "excerpt": "Cold outreach works when four things are built in the right order: infrastructure, list, message, follow-up. Most failures are in the first two, and most effort goes into the third."
+  },
+  {
     "slug": "follow-up-email-after-cold-call",
     "title": "The Follow-Up Email After A Cold Call: What To Send And When",
     "date": "2026-10-20",
     "author": "Tom",
     "excerpt": "Send a short email within the hour, reference one specific thing, ask for one small step. What changes is what you write if they answered, what you write if they did not, and when to stop."
+  },
+  {
+    "slug": "lead-follow-up",
+    "title": "Lead Follow-Up: How Fast, How Often, And When To Stop",
+    "date": "2026-10-20",
+    "author": "Tom",
+    "excerpt": "Follow up the same day, give every lead one owner and a dated next step, then stop on schedule. Lead follow-up fails when it depends on someone's memory instead of a system."
+  },
+  {
+    "slug": "what-is-a-sales-discovery-call",
+    "title": "What Is A Sales Discovery Call, And How Do You Run One?",
+    "date": "2026-10-20",
+    "author": "Tom",
+    "excerpt": "A discovery call is not a pitch. It is a structured first conversation to decide whether there is a problem worth solving and whether you are the right person to solve it. Here is how to run one."
   },
   {
     "slug": "best-time-to-send-cold-email",
