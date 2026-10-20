@@ -10,7 +10,7 @@ excerpt: Tuesday through Thursday, mid morning, recipient's time zone. That part
 
 The best time to send a cold email is Tuesday through Thursday, mid morning in the recipient's time zone, and none of that matters if the sending domain was not warmed up properly first. Timing optimizes an email that was already going to land. It does not rescue one that was not.
 
-## The actual best windows
+## The best days and time of day to send cold emails
 
 Tuesday, Wednesday, and Thursday outperform Monday and Friday consistently. Monday mornings are triage, everyone is clearing the backlog from the weekend and skimming to delete. Friday afternoons are mentally checked out before the day is. Inside those three good days, mid morning, roughly 9 to 11am in the recipient's own time zone, beats both the very start of the day and the post lunch slump. None of this is exotic. It is the window when someone is at their desk, through the worst of their inbox, and not yet counting down to the weekend.
 
