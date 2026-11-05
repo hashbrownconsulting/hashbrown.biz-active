@@ -10,9 +10,10 @@
   gtag("js", new Date());
   gtag("config", "G-3Z1DHNXWMV");
 </script>
+<script>document.documentElement.className+=' js'</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hash Brown: B2B Outbound Systems Agency | Asia Pacific</title>
-<meta name="description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+<meta name="description" content="We build the systems that put qualified buyers on your calendar: outbound email, LinkedIn, Google Ads, and the site that converts them. Built in Asia Pacific.">
   <link rel="icon" type="image/png" sizes="512x512" href="https://hashbrown.biz/icon-512.png">
   <link rel="icon" type="image/png" sizes="192x192" href="https://hashbrown.biz/icon-192.png">
   <link rel="icon" type="image/x-icon" href="https://hashbrown.biz/favicon.ico">
@@ -21,12 +22,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hash Brown">
   <meta property="og:title" content="Hash Brown: B2B Outbound Systems Agency | Asia Pacific">
-  <meta property="og:description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+  <meta property="og:description" content="We build the systems that put qualified buyers on your calendar: outbound email, LinkedIn, Google Ads, and the site that converts them. Built in Asia Pacific.">
   <meta property="og:url" content="https://hashbrown.biz/">
   <meta property="og:image" content="https://hashbrown.biz/icon-512.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hash Brown: B2B Outbound Systems Agency | Asia Pacific">
-  <meta name="twitter:description" content="We build complete B2B outbound systems: email, LinkedIn, and the funnel between, so you only ever talk to qualified leads. Owned by you. Built in Asia Pacific.">
+  <meta name="twitter:description" content="We build the systems that put qualified buyers on your calendar: outbound email, LinkedIn, Google Ads, and the site that converts them. Built in Asia Pacific.">
   <meta name="twitter:image" content="https://hashbrown.biz/icon-512.png">
   <script type="application/ld+json">
   {
@@ -35,8 +36,18 @@
     "name": "Hash Brown",
     "url": "https://hashbrown.biz/",
     "logo": "https://hashbrown.biz/icon-512.png",
-    "description": "B2B outbound systems agency: email, LinkedIn, and the funnel between. Built in Asia Pacific.",
+    "description": "Hash Brown builds the systems that put qualified buyers on your calendar: outbound email, LinkedIn outreach, Google Ads for B2B and B2C, and web development. Built in Asia Pacific.",
     "areaServed": "Asia Pacific",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Hash Brown services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "B2B outbound systems", "description": "Email and LinkedIn outbound built as one system: infrastructure, lead data, sequencing and reply handling, handed over to you."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LinkedIn outreach", "description": "Manual outreach written and sent by a person, or automated, paced outreach with a person reviewing replies."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Ads for B2B and B2C", "description": "Search campaigns and landing pages built to produce booked calls, bookings and qualified leads."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web development", "description": "Fast, clean websites that load, convert and stay easy to update. Starts at US$1,000."}}
+      ]
+    },
     "sameAs": [
       "https://www.linkedin.com/in/monty-hasan/",
       "https://www.linkedin.com/in/thomas-brown-33775912b/"
@@ -60,6 +71,16 @@
       },
       {
         "@type": "Question",
+        "name": "What is the difference between manual and automated LinkedIn outreach?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Manual means every message is written and sent by a person to a hand-picked list, which suits senior and high-value buyers. Automated means sequenced, paced outreach that reaches more of your market, with a person reviewing replies before anything reaches your team. Some set-ups use both: manual for a short list of key accounts and automated for the wider market."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do you run Google Ads for consumer businesses as well as B2B?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The setup differs. B2B campaigns are built around buying intent and a landing page that qualifies the visit before it books a call. B2C campaigns are built around the offer, local intent and a fast path to booking or purchase. Both are measured on what matters to you, booked calls, bookings or sales, not clicks."}
+      },
+      {
+        "@type": "Question",
         "name": "Who owns the system afterward?",
         "acceptedAnswer": {"@type": "Answer", "text": "You do. Domains, inboxes, workspace, documentation, all handed over at the end of the build."}
       },
@@ -80,60 +101,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
-<style>
+<style id="shared-css">
 /* ============================================================
    HASH BROWN · shared stylesheet
-   Used by: index.html, blog.html, post.html, privacy.html, terms.html
-   Edit styles once here; every page updates.
+   Inlined into every page by tools/sync-site.py (no render-blocking request).
+   Edit here, then run: python3 tools/sync-site.py && python3 tools/build-blog.py
+   Home-page-only styles live in index.html.
    ============================================================ */
 :root{
-  --paper:#FFFFFF; --panel:#F3F3F3; --ink:#373738; --black:#111113; --ghost:#9696A1; --rule:#E2E2E5;
+  --paper:#FFFFFF; --panel:#F3F3F3; --ink:#373738; --black:#111113; --ghost:#9696A1; --rule:#E2E2E5; --accent:#B4632F;
   --max:1280px; --pad:clamp(20px,4vw,64px);
+  --r:22px; --r-sm:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow:0 1px 2px rgba(17,17,19,.04),0 18px 40px -18px rgba(17,17,19,.2);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{font-family:"Archivo",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ghost)}
 .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 a{color:inherit}
 h1,h2,h3{font-weight:800;line-height:1.05;letter-spacing:-.02em;color:var(--black)}
-h2{font-size:clamp(28px,4vw,44px)}
+h2{font-size:clamp(30px,4.2vw,50px);letter-spacing:-.03em}
 .marker{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
 .marker::after{content:"";flex:1;height:1px;background:var(--rule)}
-.btn{display:inline-block;background:var(--black);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:16px 32px;transition:opacity .15s ease;border:0;cursor:pointer;font-family:inherit}
-.btn:hover{opacity:.82}
-.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--black);outline-offset:3px}
-.micro{font-size:13px;color:var(--ghost);margin-top:10px}
+.micro{font-size:13px;color:var(--ghost);margin-top:14px}
 .mark{display:inline-block;vertical-align:middle}
 picture{display:contents}
 
-/* NAV */
-nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);z-index:50}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--black);color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1;padding:17px 30px;border:1px solid var(--black);border-radius:999px;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(17,17,19,.55)}
+.btn.ghost{background:transparent;color:var(--black)}
+.btn.ghost:hover{background:var(--black);color:#fff}
+.btn.light{background:#fff;color:var(--black);border-color:#fff}
+.btn.sm{padding:11px 20px;font-size:13px}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--black);outline-offset:3px}
+
+/* NAV: floating pill */
+nav{position:sticky;top:0;z-index:50;padding:12px var(--pad) 0;pointer-events:none}
+.nav-in{pointer-events:auto;position:relative;max-width:var(--max);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 22px;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(17,17,19,.08);border-radius:999px;box-shadow:var(--shadow)}
 .wordmark{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.01em;color:var(--black);text-decoration:none}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);transition:color .15s}
 .nav-links a:hover{color:var(--black)}
-.nav-links .btn{padding:10px 20px;font-size:13px;color:#fff}
-.nav-links.open .btn{color:#fff}
-/* Hamburger toggle (hidden on desktop) */
-.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;margin:-8px;color:var(--black)}
+.nav-links .btn{color:#fff}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;margin-right:6px;color:var(--black)}
 .nav-toggle svg{display:block;width:26px;height:26px}
-@media(max-width:900px){
+@media(max-width:960px){
   .nav-toggle{display:inline-flex}
   .nav-links{
-    position:absolute;top:64px;left:0;right:0;
+    position:absolute;top:calc(100% + 10px);left:0;right:0;
     flex-direction:column;align-items:stretch;gap:0;
-    background:#fff;border-bottom:1px solid var(--rule);
-    padding:8px var(--pad) 20px;
-    box-shadow:0 12px 24px rgba(0,0,0,.06);
-    display:none;
+    background:#fff;border:1px solid var(--rule);border-radius:var(--r);
+    padding:8px 22px 20px;box-shadow:var(--shadow);display:none;
   }
   .nav-links.open{display:flex}
   .nav-links a{padding:14px 0;font-size:16px;border-bottom:1px solid var(--rule)}
   .nav-links a:last-child{border-bottom:0}
-  .nav-links .btn{margin-top:14px;padding:14px 20px;font-size:15px;text-align:center}
+  .nav-links .btn{margin-top:14px;padding:15px 20px;font-size:15px;text-align:center}
 }
 
 /* SCALLOP RULE */
@@ -149,83 +176,21 @@ nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(
 footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-size:14px}
 .foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding:64px 0 48px}
 .foot h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5E5E66;font-weight:500;margin-bottom:16px}
-.foot a{display:block;text-decoration:none;padding:4px 0;color:#9696A1}
+.foot a{display:block;text-decoration:none;padding:4px 0;color:#9696A1;transition:color .15s}
 .foot a:hover{color:#fff}
 .foot .fm{color:#fff;font-weight:800;font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .legal{border-top:1px solid #26262B;padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px}
 @media(max-width:820px){.foot{grid-template-columns:1fr 1fr}}
 
 /* ============================================================
-   LEAD / CONTACT FORM
-   ============================================================ */
-.contact{background:var(--panel)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start;margin-top:36px}
-.contact-copy h2{margin-bottom:16px}
-.contact-copy p{max-width:46ch}
-.lead-form{background:var(--paper);border:1px solid var(--rule);padding:clamp(24px,3vw,40px)}
-.field{margin-bottom:20px}
-.field label{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-bottom:8px}
-.field label .req{color:#B4632F}
-.field input,.field textarea{
-  width:100%;font-family:inherit;font-size:15px;color:var(--ink);
-  background:var(--paper);border:1px solid var(--rule);padding:14px 16px;
-  transition:border-color .15s ease;
-}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--black)}
-.field textarea{resize:vertical;min-height:110px}
-.field .err{display:none;color:#B4632F;font-size:12.5px;margin-top:6px}
-.field.invalid input,.field.invalid textarea{border-color:#B4632F}
-.field.invalid .err{display:block}
-.lead-form .btn{width:100%;text-align:center;margin-top:6px}
-.form-note{font-size:12.5px;color:var(--ghost);margin-top:14px;text-align:center}
-.form-status{display:none;padding:16px 18px;font-size:14px;margin-bottom:20px;border:1px solid var(--rule)}
-.form-status.show{display:block}
-.form-status.ok{background:#F1F7F1;border-color:#BcdBBc;color:#2E5E2E}
-.form-status.bad{background:#FBF1EC;border-color:#E6C3AE;color:#8A3E15}
-@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
-
-/* ============================================================
-   OTHER SERVICES
-   ============================================================ */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
-.service{background:var(--paper);padding:32px 28px}
-.service h3{font-size:18px;margin-bottom:10px}
-.service p{font-size:14.5px}
-@media(max-width:820px){.services{grid-template-columns:1fr}}
-
-/* Founder portraits (side by side) */
-.founders-img{background:none!important;padding:0!important;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.founders-img figure{margin:0}
-.founders-img img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(1)}
-.founders-img figcaption{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-top:8px}
-
-/* ============================================================
-   PRICING
-   ============================================================ */
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
-.price{background:var(--paper);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column}
-.price .tier{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
-.price .amt{font-weight:800;font-size:clamp(30px,3.4vw,46px);color:var(--black);letter-spacing:-.02em;margin:14px 0 2px}
-.price .unit{font-size:14px;color:var(--ghost);margin-bottom:22px}
-.price .amt small{font-weight:500;font-size:16px;color:var(--ghost);letter-spacing:0}
-.price ul{list-style:none;margin:0 0 26px}
-.price li{padding:9px 0 9px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
-.price li:last-child{border-bottom:0}
-.price li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
-.price .btn{margin-top:auto;align-self:flex-start}
-.price-note{font-size:13px;color:var(--ghost);margin-top:22px;max-width:60ch}
-.save{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;color:#2E5E2E;background:#F1F7F1;border:1px solid #BcdBBc;padding:3px 8px;margin-left:8px;vertical-align:middle}
-@media(max-width:820px){.pricing-grid{grid-template-columns:1fr}}
-
-/* ============================================================
    BLOG
    ============================================================ */
-.page-head{padding:clamp(64px,9vw,120px) 0 clamp(32px,4vw,56px)}
-.page-head h1{font-size:clamp(36px,5.5vw,68px);max-width:16ch}
+.page-head{padding:clamp(56px,8vw,112px) 0 clamp(32px,4vw,56px)}
+.page-head h1{font-size:clamp(38px,5.6vw,72px);max-width:16ch;letter-spacing:-.035em}
 .page-head p{max-width:56ch;margin-top:20px;font-size:clamp(16px,1.3vw,18px)}
-.post-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:8px 0 clamp(64px,8vw,120px)}
-.post-card{background:var(--paper);padding:clamp(28px,3vw,40px);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:12px;transition:background .15s ease}
-.post-card:hover{background:var(--panel)}
+.post-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 clamp(64px,8vw,120px)}
+.post-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(26px,3vw,38px);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:12px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .2s}
+.post-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#cfcfd4}
 .post-card .pc-meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
 .post-card h3{font-size:clamp(20px,2.2vw,26px)}
 .post-card p{font-size:15px}
@@ -236,7 +201,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 /* Single post (rendered markdown) */
 .article{max-width:720px;margin:0 auto;padding:clamp(40px,6vw,80px) 0 clamp(64px,8vw,120px)}
 .article .a-meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-bottom:18px}
-.article h1{font-size:clamp(32px,4.6vw,54px);margin-bottom:8px}
+.article h1{font-size:clamp(32px,4.6vw,54px);margin-bottom:8px;letter-spacing:-.03em}
 .article .prose{margin-top:36px}
 .article .prose h2{font-size:clamp(24px,3vw,32px);margin:40px 0 14px}
 .article .prose h3{font-size:clamp(19px,2.2vw,23px);margin:32px 0 12px}
@@ -245,8 +210,8 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 .article .prose li{margin-bottom:8px}
 .article .prose blockquote{border-left:3px solid var(--black);padding-left:20px;margin:0 0 20px;font-weight:700;color:var(--black)}
 .article .prose a{color:var(--black);text-decoration:underline;text-underline-offset:3px}
-.article .prose img{max-width:100%;height:auto;margin:20px 0}
-.article .prose code{font-family:"IBM Plex Mono",monospace;font-size:.9em;background:var(--panel);padding:2px 6px}
+.article .prose img{max-width:100%;height:auto;margin:20px 0;border-radius:var(--r-sm)}
+.article .prose code{font-family:"IBM Plex Mono",monospace;font-size:.9em;background:var(--panel);padding:2px 6px;border-radius:6px}
 .back-link{display:inline-block;margin-bottom:28px;font-weight:700;text-decoration:none;color:var(--black);border-bottom:2px solid var(--black);padding-bottom:2px}
 
 /* Generic legal/content page */
@@ -255,96 +220,275 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 .legal-page h2{font-size:clamp(20px,2.4vw,26px);margin:36px 0 12px}
 .legal-page p{margin-bottom:18px}
 .legal-page ul{margin:0 0 18px 22px}
+
+/* Scroll reveal. Only hidden when JS is present, so crawlers and no-JS visitors see everything. */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.post-card{transition:none}
+}
 </style>
 <style>
 /* ---- home-page-only styles ---- */
-.hero{padding:clamp(72px,10vw,140px) 0 clamp(48px,7vw,96px);overflow:hidden;position:relative}
-.hero .wrap{position:relative}
-.hero h1{font-size:clamp(40px,6.4vw,84px);max-width:14ch;position:relative;z-index:2}
-.hero-sub{max-width:56ch;margin:32px 0 36px;font-size:clamp(16px,1.4vw,19px);position:relative;z-index:2}
-.hero-crop{position:absolute;right:-4%;top:-18%;z-index:1;pointer-events:none;width:clamp(340px,38vw,600px);opacity:1}
-.hero-crop use{fill:var(--panel)}
-@media(max-width:700px){.hero-crop{display:none}.final-crop{display:none}}
-.proof{border-bottom:1px solid var(--rule);padding:26px 0;background:var(--paper)}
-.logo-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
-.logo-slot{flex:1 1 150px;min-width:130px;height:92px;background:#fff;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;padding:16px}
+
+/* HERO */
+.hero{position:relative;padding:clamp(36px,5vw,72px) 0 clamp(56px,7vw,104px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,4vw,56px);align-items:center}
+.hero h1{font-size:clamp(38px,4.6vw,68px);line-height:1.04;letter-spacing:-.035em;margin-top:22px}
+.hl{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' viewBox='0 0 20 10'%3E%3Cpath d='M0,10 A10,10 0 0 1 20,10' fill='none' stroke='%23111113' stroke-width='2'/%3E%3C/svg%3E") repeat-x left bottom/20px 10px;padding-bottom:.16em}
+@media(min-width:700px){.hl{white-space:nowrap}}
+.hero-sub{max-width:54ch;margin:30px 0 34px;font-size:clamp(16px,1.4vw,19px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.channels{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;list-style:none}
+.channels li{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);background:#fff}
+.hero-visual{position:relative;width:100%;max-width:540px;aspect-ratio:5/6;margin-left:auto}
+.hv-blob{position:absolute;left:50%;top:0;height:100%;width:auto;aspect-ratio:220/320;transform:translateX(-50%)}
+.hv-blob use{fill:var(--panel)}
+.hv-card{position:absolute;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid rgba(17,17,19,.07);border-radius:18px;padding:13px 18px 13px 14px;box-shadow:var(--shadow);animation:floaty 7s ease-in-out infinite;max-width:300px}
+.hv-card .ic{flex:0 0 38px;height:38px;border-radius:12px;background:var(--black);color:#fff;display:grid;place-items:center}
+.hv-card .ic svg{width:19px;height:19px}
+.hv-card b{display:block;font-size:14px;line-height:1.3;color:var(--black);letter-spacing:-.005em}
+.hv-card span.s{display:block;font-size:12px;color:var(--ghost);margin-top:2px}
+.hv-a{top:12%;left:-3%}
+.hv-b{top:42%;right:-3%;animation-delay:-2.3s}
+.hv-c{bottom:11%;left:3%;animation-delay:-4.6s}
+.hv-note{position:absolute;right:4px;bottom:-4px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{aspect-ratio:auto;max-width:none;margin:8px 0 0;display:grid;gap:12px}
+  .hv-blob{display:none}
+  .hv-card{position:static;animation:none;max-width:none}
+  .hv-note{position:static;margin-top:2px}
+}
+
+/* PROOF MARQUEE */
+.proof{padding:34px 0 40px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper)}
+.marquee{margin-top:18px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;width:max-content}
+.js .track{animation:slide 60s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.logo-slot{flex:0 0 auto;width:156px;height:92px;margin-right:14px;background:#fff;border:1px solid var(--rule);border-radius:16px;display:flex;align-items:center;justify-content:center;padding:16px}
 .logo-slot img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
-.card{background:var(--paper);padding:36px 30px}
-.card h3{font-size:19px;margin-bottom:12px}
+html:not(.js) .track{flex-wrap:wrap;width:auto;row-gap:14px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .js .track{animation:none;flex-wrap:wrap;width:auto;row-gap:14px}
+  .track .clone{display:none}
+  .hv-card{animation:none}
+}
+
+/* PRODUCTS (bento) */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:44px}
+.pcard{--sep:#fff;grid-column:span 6;position:relative;background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:clamp(24px,2.6vw,38px);display:flex;flex-direction:column;gap:16px;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfcfd4}
+.p-outbound{grid-column:span 7;background:var(--black);border-color:var(--black);color:#BDBDC4;--sep:var(--black)}
+.p-outbound:hover{border-color:var(--black)}
+.p-linkedin{grid-column:span 5}
+.p-ads{grid-column:span 5}
+.p-web{grid-column:span 7;background:var(--panel);--sep:var(--panel)}
+.pc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pc-tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ghost)}
+.pc-chip{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--black);color:#fff}
+.p-outbound .pc-chip{background:#fff;color:var(--black)}
+.pc-ic{width:44px;height:44px;color:var(--black)}
+.pc-ic path,.pc-ic rect,.pc-ic circle{fill:currentColor;stroke:var(--sep);stroke-width:1}
+.p-outbound .pc-ic{color:#fff}
+.pcard h3{font-size:clamp(24px,2.5vw,32px);letter-spacing:-.025em}
+.p-outbound h3{color:#fff}
+.pcard p{font-size:15.5px}
+.ticks{list-style:none}
+.ticks li{padding:8px 0 8px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
+.ticks li:last-child{border-bottom:0}
+.ticks li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
+.p-outbound .ticks li{border-color:#2A2A30;color:#D6D6DB}
+.p-outbound .ticks li::before{background:#fff}
+.p-web .ticks li{border-color:#dcdce0}
+.pc-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:6px}
+.pc-price{font-weight:700;color:var(--black);font-size:15px}
+.p-outbound .pc-price{color:#fff}
+.link{font-weight:700;color:var(--black);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px;transition:opacity .15s}
+.link:hover{opacity:.7}
+.p-outbound .link{color:#fff}
+.flow{display:flex;align-items:center;flex-wrap:wrap;row-gap:10px;margin:2px 0}
+.flow span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border:1px solid #3A3A41;border-radius:999px;color:#E6E6EA;white-space:nowrap}
+.flow i{flex:0 0 18px;height:1px;background:linear-gradient(90deg,#3A3A41,#9A9AA3,#3A3A41);background-size:200% 100%;animation:run 2.6s linear infinite}
+@keyframes run{to{background-position:-200% 0}}
+.tablist{display:inline-flex;padding:4px;background:var(--panel);border-radius:999px;gap:2px;align-self:flex-start}
+.tablist button{border:0;background:transparent;font-family:inherit;font-size:13px;font-weight:700;color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.tablist button[aria-selected="true"]{background:#fff;color:var(--black);box-shadow:0 1px 3px rgba(17,17,19,.12)}
+.tabpanel{margin-top:16px;display:grid;gap:12px}
+.tabpanel[hidden]{display:none}
+html:not(.js) .tabpanel[hidden]{display:grid}
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+.browser{border-radius:16px;background:#fff;border:1px solid #dcdce0;box-shadow:var(--shadow);overflow:hidden}
+.browser .bar{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--rule)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#d7d7dc}
+.browser .screen{padding:20px;display:grid;gap:11px}
+.browser .l{height:8px;border-radius:4px;background:#e6e6ea}
+.browser .l.h{height:16px;width:72%;background:var(--black);border-radius:7px}
+.browser .l.s{width:58%}
+.browser .l.b{height:32px;width:104px;background:var(--black);border-radius:999px;margin-top:6px}
+@media(max-width:1000px){
+  .p-outbound,.p-web,.p-linkedin,.p-ads{grid-column:span 12}
+  .split{grid-template-columns:1fr}
+}
+
+/* PROBLEM / SYSTEM */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:36px 30px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h3{font-size:20px;margin-bottom:12px;letter-spacing:-.02em}
 .card p{font-size:15px}
+.chip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-bottom:14px}
 @media(max-width:820px){.cards{grid-template-columns:1fr}}
-.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
-.layer{background:var(--paper);padding:28px 22px;display:flex;flex-direction:column;gap:12px}
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px}
+.layer{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:26px 22px;display:flex;flex-direction:column;gap:12px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .2s}
+.layer:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfcfd4}
 .layer svg{width:52px;height:52px}
 .layer .idx{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ghost)}
 .layer h3{font-size:16px;line-height:1.25}
 .layer p{font-size:13.5px}
 @media(max-width:1000px){.rail{grid-template-columns:1fr}.layer{flex-direction:row;align-items:center;gap:20px}.layer svg{flex:0 0 44px;height:44px}.layer .idx{min-width:28px}.layer h3{min-width:170px}}
 @media(max-width:640px){.layer{flex-wrap:wrap}}
-.after-link{display:inline-block;margin-top:28px;font-weight:700;text-decoration:none;color:var(--black);border-bottom:2px solid var(--black);padding-bottom:2px}
+.after-link{display:inline-block;margin-top:30px;font-weight:700;text-decoration:none;color:var(--black);border-bottom:2px solid var(--black);padding-bottom:2px}
+
+/* WHY */
 .why{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:center;padding:clamp(40px,5vw,72px) 0;border-top:1px solid var(--rule)}
-.why:first-of-type{border-top:0}
-.why .img{aspect-ratio:4/3;background:linear-gradient(135deg,#E9E9EC 0%,#D6D6DB 100%);display:flex;align-items:flex-end;padding:18px}
-.why .img span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
-.why .img.filled{background:var(--panel);padding:20px;align-items:center;justify-content:center}
-.why .img.filled img{width:100%;height:100%;object-fit:contain;display:block}
-.why h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:16px}
+.marker + .why{border-top:0}
+.why .img{border-radius:var(--r);overflow:hidden}
+.why .img.filled{background:#fff;border:1px solid var(--rule)}
+.why .img.filled img{width:100%;height:auto;display:block}
+.why h3{font-size:clamp(24px,2.6vw,34px);margin-bottom:16px;letter-spacing:-.025em}
 .why:nth-of-type(even) .img{order:2}
 @media(max-width:820px){.why{grid-template-columns:1fr}.why:nth-of-type(even) .img{order:0}}
-.spec{width:100%;border-collapse:collapse;margin-top:44px;border:1px solid var(--rule)}
-.spec th,.spec td{border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;padding:26px 24px}
-.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
-.spec th{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--ghost);font-weight:500;width:80px}
-.spec td.name{font-weight:800;color:var(--black);width:220px;font-size:18px}
-@media(max-width:700px){.spec th,.spec td{display:block;width:auto;padding:8px 18px}.spec tr{display:block;border-bottom:1px solid var(--rule);padding:14px 0}}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.stat{background:var(--paper);padding:44px 28px}
-.stat .num{font-weight:800;font-size:clamp(30px,3.4vw,46px);color:var(--black);letter-spacing:-.02em}
-.stat .lab{margin-top:6px;font-size:13px;color:var(--ghost)}
-.verify{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#B4632F;letter-spacing:.1em}
-@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
-.case blockquote{font-size:clamp(20px,2.2vw,28px);font-weight:700;color:var(--black);line-height:1.3;max-width:30ch;letter-spacing:-.01em}
-.case p{max-width:62ch;margin-top:22px}
-.qual{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
-.qual > div{background:var(--paper);padding:36px 32px}
-.qual h3{font-size:18px;margin-bottom:16px}
-.qual ul{list-style:none}
-.qual li{padding:8px 0 8px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
-.qual li:last-child{border-bottom:0}
-.qual li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
-@media(max-width:820px){.qual{grid-template-columns:1fr}}
-.faq-item{border-bottom:1px solid var(--rule)}
-.faq-item:first-of-type{border-top:1px solid var(--rule)}
-.faq-item button{width:100%;background:none;border:0;text-align:left;cursor:pointer;font-family:inherit;font-size:17px;font-weight:700;color:var(--black);padding:24px 44px 24px 0;position:relative}
-.faq-item button::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-weight:400;font-size:24px;color:var(--ghost)}
-.faq-item button[aria-expanded="true"]::after{content:"−"}
-.faq-a{display:none;padding:0 0 26px;max-width:64ch;font-size:15px}
-.faq-item button[aria-expanded="true"] + .faq-a{display:block}
-.final{background:var(--black);color:#fff;overflow:hidden;position:relative}
-.final .wrap{position:relative;z-index:2;padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px)}
-.final h2{color:#fff;font-size:clamp(34px,5vw,64px);max-width:16ch}
-.final .micro{color:#8B8B93}
-.final-crop{position:absolute;right:-6%;top:-24%;width:clamp(320px,34vw,540px);pointer-events:none}
-.final-crop use{fill:#1D1D21}
-.price-notes-box{border:1px solid var(--rule);background:var(--paper);padding:24px 28px;margin-top:28px;max-width:none}
+.founders-img{background:none!important;border:0!important;padding:0!important;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;aspect-ratio:auto!important;overflow:visible!important}
+.founders-img figure{margin:0}
+.founders-img img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(1);border-radius:var(--r)}
+.founders-img figcaption{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-top:8px}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:34px 30px;position:relative;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step .n{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--ghost)}
+.step h3{font-size:26px;margin:14px 0 12px;letter-spacing:-.025em}
+.step p{font-size:15px}
+@media(max-width:900px){.steps{grid-template-columns:1fr}}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+.price{background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column}
+.price .tier{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
+.price .amt{font-weight:800;font-size:clamp(32px,3.6vw,50px);color:var(--black);letter-spacing:-.03em;margin:14px 0 2px}
+.price .unit{font-size:14px;color:var(--ghost);margin-bottom:22px}
+.price .amt small{font-weight:500;font-size:16px;color:var(--ghost);letter-spacing:0}
+.price ul{list-style:none;margin:0 0 26px}
+.price li{padding:9px 0 9px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
+.price li:last-child{border-bottom:0}
+.price li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
+.price .btn{margin-top:auto;align-self:flex-start}
+.save{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;color:#2E5E2E;background:#F1F7F1;border:1px solid #BcdBBc;padding:3px 8px;margin-left:8px;vertical-align:middle;border-radius:999px}
+.price-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.pm{background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:clamp(24px,2.4vw,32px);display:flex;flex-direction:column;gap:10px}
+.pm .tier{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost)}
+.pm .amt{font-weight:800;font-size:clamp(24px,2.4vw,32px);color:var(--black);letter-spacing:-.025em}
+.pm .amt small{font-weight:500;font-size:15px;color:var(--ghost);letter-spacing:0}
+.pm p{font-size:14.5px;margin-bottom:12px}
+.pm .btn{margin-top:auto;align-self:flex-start}
+.pm.hot{background:var(--black);border-color:var(--black);color:#BDBDC4}
+.pm.hot .tier{color:#8B8B93}
+.pm.hot .amt{color:#fff}
+.pm.hot .amt small{color:#8B8B93}
+.pm.hot .tag{display:inline-block;align-self:flex-start;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:#fff;padding:4px 10px;border-radius:999px}
+.price-notes-box{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);padding:24px 28px;margin-top:16px}
 .price-notes-box p{font-size:13.5px;color:var(--ghost)}
 .price-notes-box p+p{margin-top:12px}
-.price-highlight{border:2px solid var(--black);background:var(--paper);padding:clamp(28px,3vw,40px);margin-top:28px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
-.price-highlight .ph-copy{flex:1 1 320px}
-.price-highlight .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--black);padding:4px 10px;margin-bottom:14px}
-.price-highlight h3{font-size:20px;margin-bottom:8px}
-.price-highlight .amt{font-weight:800;font-size:clamp(24px,2.6vw,32px);color:var(--black);letter-spacing:-.02em;margin-bottom:10px}
-.price-highlight .amt small{font-weight:500;font-size:15px;color:var(--ghost);letter-spacing:0}
-.price-highlight p{font-size:14.5px;color:var(--ink);max-width:52ch}
-.price-highlight .btn{flex:0 0 auto}
-@media(max-width:600px){.price-highlight{flex-direction:column;align-items:stretch}.price-highlight .btn{width:100%;text-align:center}}
+@media(max-width:900px){.pricing-grid,.price-mini{grid-template-columns:1fr}}
+
+/* THE REST OF THE PIPELINE */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.service{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:30px 28px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.service:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.service h3{font-size:19px;margin-bottom:10px;letter-spacing:-.02em}
+.service p{font-size:14.5px}
+@media(max-width:900px){.services{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.services{grid-template-columns:1fr}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.stat{padding:clamp(32px,4vw,56px) clamp(24px,3vw,40px);border-right:1px solid var(--rule)}
+.stat:last-child{border-right:0}
+.stat .num{font-weight:800;font-size:clamp(44px,6vw,84px);line-height:1;color:var(--black);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat .lab{margin-top:14px;font-size:14px;color:var(--ink);max-width:28ch}
+@media(max-width:820px){.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--rule)}.stat:last-child{border-bottom:0}}
+
+/* CASES / QUALIFY */
+.case blockquote{font-size:clamp(24px,3vw,40px);font-weight:800;color:var(--black);line-height:1.12;max-width:24ch;letter-spacing:-.03em}
+.case p{max-width:62ch;margin-top:22px}
 .cases-4{grid-template-columns:repeat(2,1fr)}
 @media(max-width:820px){.cases-4{grid-template-columns:1fr}}
+.qual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+.qual > div{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:36px 32px}
+.qual > div:last-child{background:transparent;border-style:dashed}
+.qual h3{font-size:20px;margin-bottom:16px;letter-spacing:-.02em}
+.qual ul{list-style:none}
+.qual li{padding:9px 0 9px 24px;position:relative;font-size:15px;border-bottom:1px solid var(--rule)}
+.qual li:last-child{border-bottom:0}
+.qual li::before{content:"";position:absolute;left:0;top:16px;width:12px;height:7px;background:var(--black);border-radius:12px 12px 0 0}
+@media(max-width:820px){.qual{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-item:first-of-type{border-top:1px solid var(--rule)}
+.faq-item button{width:100%;background:none;border:0;text-align:left;cursor:pointer;font-family:inherit;font-size:clamp(17px,1.6vw,20px);font-weight:700;color:var(--black);padding:26px 56px 26px 0;position:relative;letter-spacing:-.01em}
+.faq-item button::before{content:"";position:absolute;right:0;top:50%;width:34px;height:34px;margin-top:-17px;border:1px solid var(--rule);border-radius:50%;transition:background .2s,border-color .2s}
+.faq-item button::after{content:"+";position:absolute;right:0;top:50%;width:34px;height:34px;margin-top:-17px;display:grid;place-items:center;font-weight:400;font-size:20px;color:var(--ink);transition:transform .3s var(--ease)}
+.faq-item button:hover::before{border-color:var(--black)}
+.faq-item button[aria-expanded="true"]::after{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 0 28px;max-width:64ch;font-size:15.5px}
+.faq-item button[aria-expanded="true"] + .faq-a{display:block}
+
+/* CONTACT FORM */
+.contact{background:var(--panel)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start;margin-top:36px}
+.contact-copy h2{margin-bottom:16px}
+.contact-copy p{max-width:46ch}
+.lead-form{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(24px,3vw,40px)}
+.field{margin-bottom:20px}
+.field label{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ghost);margin-bottom:8px}
+.field label .req{color:#B4632F}
+.field input,.field textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:14px 16px;transition:border-color .15s ease,box-shadow .15s ease}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--black);box-shadow:0 0 0 4px rgba(17,17,19,.06)}
+.field textarea{resize:vertical;min-height:110px}
+.field .err{display:none;color:#B4632F;font-size:12.5px;margin-top:6px}
+.field.invalid input,.field.invalid textarea{border-color:#B4632F}
+.field.invalid .err{display:block}
+.lead-form .btn{width:100%;text-align:center;margin-top:6px}
+.form-note{font-size:12.5px;color:var(--ghost);margin-top:14px;text-align:center}
+.form-status{display:none;padding:16px 18px;font-size:14px;margin-bottom:20px;border:1px solid var(--rule);border-radius:var(--r-sm)}
+.form-status.show{display:block}
+.form-status.ok{background:#F1F7F1;border-color:#BcdBBc;color:#2E5E2E}
+.form-status.bad{background:#FBF1EC;border-color:#E6C3AE;color:#8A3E15}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+/* FINAL CTA */
+.final{background:var(--black);color:#fff;overflow:hidden;position:relative}
+.final .wrap{position:relative;z-index:2;padding-top:clamp(80px,10vw,150px);padding-bottom:clamp(80px,10vw,150px)}
+.final h2{color:#fff;font-size:clamp(36px,5.6vw,76px);max-width:15ch;letter-spacing:-.035em;line-height:1}
+.final .micro{color:#8B8B93}
+.final-crop{position:absolute;right:-6%;top:-24%;width:clamp(320px,34vw,540px);pointer-events:none;animation:drift 14s ease-in-out infinite}
+.final-crop use{fill:#1D1D21}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(14px) rotate(2deg)}}
+@media(max-width:700px){.final-crop{display:none}}
+@media (prefers-reduced-motion:reduce){.final-crop{animation:none}.flow i{animation:none}}
+
+/* MOBILE STICKY CTA */
 .sticky-cta{display:none}
 @media(max-width:700px){
-  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--rule)}
-  .sticky-cta .btn{display:block;text-align:center;width:100%}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--rule)}
+  .sticky-cta .btn{display:flex;width:100%}
   body{padding-bottom:84px}
 }
 </style>
@@ -359,7 +503,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 </svg>
 
 <nav aria-label="Main">
-  <div class="wrap nav-in">
+  <div class="nav-in">
     <a class="wordmark" href="/">
       <svg class="mark" viewBox="0 0 220 320" style="height:26px" aria-hidden="true"><use href="#hb-mark" fill="#111113"/></svg>
       Hash Brown
@@ -370,38 +514,53 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
       </svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="#system">The System</a>
-      <a href="#solutions">Solutions</a>
-      <a href="#qualify">Industries</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#case">Case Studies</a>
-      <a href="#why">About</a>
+      <a href="/#products">Products</a>
+      <a href="/#system">The System</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#case">Case Studies</a>
+      <a href="/#why">About</a>
       <a href="/blog/">Blog</a>
-      <a class="btn" href="#contact">Book a call</a>
+      <a class="btn sm" href="/#contact">Book a call</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <svg class="hero-crop" viewBox="0 0 220 320" aria-hidden="true"><use href="#hb-mark"/></svg>
-  <div class="wrap">
-    <p class="mono"># B2B OUTBOUND SYSTEMS · ASIA PACIFIC</p>
-    <h1 style="margin-top:22px">You should only ever be talking to qualified leads.</h1>
-    <p class="hero-sub">Hash Brown builds complete B2B sales and outbound systems: email, LinkedIn, and the funnel in between, so warm, qualified conversations land in your inbox while you run the business. Built in Asia Pacific. Owned by you.</p>
-    <a class="btn" href="#contact">Book a call</a>
-    <p class="micro">60 minute discovery call. We'll tell you in one call if this isn't a fit.</p>
-  </div>
-  <div class="wrap" style="margin-top:clamp(48px,6vw,80px)">
-    <svg class="scallop" viewBox="0 0 1200 16" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,14 A10,10 0 0 1 20,14 A10,10 0 0 1 40,14 A10,10 0 0 1 60,14 A10,10 0 0 1 80,14 A10,10 0 0 1 100,14 A10,10 0 0 1 120,14 A10,10 0 0 1 140,14 A10,10 0 0 1 160,14 A10,10 0 0 1 180,14 A10,10 0 0 1 200,14 A10,10 0 0 1 220,14 A10,10 0 0 1 240,14 A10,10 0 0 1 260,14 A10,10 0 0 1 280,14 A10,10 0 0 1 300,14 A10,10 0 0 1 320,14 A10,10 0 0 1 340,14 A10,10 0 0 1 360,14 A10,10 0 0 1 380,14 A10,10 0 0 1 400,14 A10,10 0 0 1 420,14 A10,10 0 0 1 440,14 A10,10 0 0 1 460,14 A10,10 0 0 1 480,14 A10,10 0 0 1 500,14 A10,10 0 0 1 520,14 A10,10 0 0 1 540,14 A10,10 0 0 1 560,14 A10,10 0 0 1 580,14 A10,10 0 0 1 600,14 A10,10 0 0 1 620,14 A10,10 0 0 1 640,14 A10,10 0 0 1 660,14 A10,10 0 0 1 680,14 A10,10 0 0 1 700,14 A10,10 0 0 1 720,14 A10,10 0 0 1 740,14 A10,10 0 0 1 760,14 A10,10 0 0 1 780,14 A10,10 0 0 1 800,14 A10,10 0 0 1 820,14 A10,10 0 0 1 840,14 A10,10 0 0 1 860,14 A10,10 0 0 1 880,14 A10,10 0 0 1 900,14 A10,10 0 0 1 920,14 A10,10 0 0 1 940,14 A10,10 0 0 1 960,14 A10,10 0 0 1 980,14 A10,10 0 0 1 1000,14 A10,10 0 0 1 1020,14 A10,10 0 0 1 1040,14 A10,10 0 0 1 1060,14 A10,10 0 0 1 1080,14 A10,10 0 0 1 1100,14 A10,10 0 0 1 1120,14 A10,10 0 0 1 1140,14 A10,10 0 0 1 1160,14 A10,10 0 0 1 1180,14 A10,10 0 0 1 1200,14" />
-    </svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="mono"># B2B outbound, LinkedIn &amp; Google Ads · Asia Pacific</p>
+      <h1>You should only ever be talking to <span class="hl">qualified leads.</span></h1>
+      <p class="hero-sub">Hash Brown builds the systems that put qualified buyers on your calendar: outbound email, LinkedIn, Google Ads, and the site that converts them. Built in Asia Pacific. Owned by you.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Book a call</a>
+        <a class="btn ghost" href="#products">See what we run</a>
+      </div>
+      <p class="micro">60 minute discovery call. We'll tell you in one call if this isn't a fit.</p>
+      <ul class="channels" aria-label="Channels we run"><li>Email</li><li>LinkedIn</li><li>Google Ads</li><li>Web</li></ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hv-blob" viewBox="0 0 220 320"><use href="#hb-mark"/></svg>
+      <div class="hv-card hv-a">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
+        <div><b>Intro call booked</b><span class="s">Tue 10:00 · from LinkedIn</span></div>
+      </div>
+      <div class="hv-card hv-b">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg></span>
+        <div><b>“Tuesday works. Send an invite?”</b><span class="s">Email reply · Qualified</span></div>
+      </div>
+      <div class="hv-card hv-c">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
+        <div><b>New lead from Google</b><span class="s">Asked for a call · Fits your ICP</span></div>
+      </div>
+      <p class="mono hv-note">Illustrative</p>
+    </div>
   </div>
 </header>
 
 <section class="proof" aria-label="Clients">
-  <div class="wrap">
-    <p class="mono">Built with and for</p>
-    <div class="logo-row">
+  <div class="wrap"><p class="mono">Built with and for</p></div>
+  <div class="marquee">
+    <div class="track" id="logoTrack">
       <div class="logo-slot"><picture><source srcset="assets/logos/topiku.webp" type="image/webp"><img src="assets/logos/topiku.png" alt="Topiku" loading="lazy" width="200" height="200"></picture></div>
       <div class="logo-slot"><picture><source srcset="assets/logos/asasi.webp" type="image/webp"><img src="assets/logos/asasi.png" alt="Asasi" loading="lazy" width="200" height="200"></picture></div>
       <div class="logo-slot"><picture><source srcset="assets/logos/vocom.webp" type="image/webp"><img src="assets/logos/vocom.png" alt="Vocom" loading="lazy" width="200" height="200"></picture></div>
@@ -417,20 +576,110 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
   </div>
 </section>
 
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="marker"><span class="mono"># 01 · What we run</span></div>
+    <h2 class="reveal">Four ways to fill your calendar with the right people.</h2>
+    <p class="lede reveal">Pick one channel or run them together. Every one is judged on booked calls and qualified leads, not clicks and impressions.</p>
+    <div class="bento">
+
+      <article class="pcard p-outbound reveal" id="p-outbound">
+        <div class="pc-top"><span class="pc-tag">01 · Core</span><span class="pc-chip">Done-For-You or Do-It-With-You</span></div>
+        <svg class="pc-ic" viewBox="0 0 100 100" aria-hidden="true"><path d="M8,8 L36,8 L36,36 A28,28 0 0 1 8,8 Z"/><rect x="36" y="8" width="28" height="28"/><path d="M64,8 L92,8 A28,28 0 0 1 64,36 Z"/><rect x="36" y="36" width="28" height="28"/><path d="M36,92 L36,78 A14,14 0 0 1 64,78 L64,92 Z"/></svg>
+        <h3>Outbound systems</h3>
+        <p>Email and LinkedIn outreach built as one complete system, wired into the sales team you already have. Built in your accounts and handed over when it is done.</p>
+        <div class="flow" aria-hidden="true"><span>Inboxes</span><i></i><span>Warm-up</span><i></i><span>Lead data</span><i></i><span>Sequences</span><i></i><span>Replies</span></div>
+        <ul class="ticks">
+          <li>Domains, inboxes and warm-up built for you</li>
+          <li>Lead data matched to your ideal client</li>
+          <li>Sequences and reply handling, documented and handed over</li>
+        </ul>
+        <div class="pc-foot"><span class="pc-price">Done-For-You from US$6,000</span><a class="link" href="#pricing">See pricing</a></div>
+      </article>
+
+      <article class="pcard p-linkedin reveal" id="p-linkedin" style="--d:80ms">
+        <div class="pc-top"><span class="pc-tag">02 · LinkedIn</span><span class="pc-chip">New</span></div>
+        <svg class="pc-ic" viewBox="0 0 100 100" aria-hidden="true"><path d="M8,8 L40,8 A32,32 0 0 1 8,40 Z"/><path d="M36,36 L68,36 A32,32 0 0 1 36,68 Z"/><path d="M64,64 L92,64 A28,28 0 0 1 64,92 Z"/></svg>
+        <h3>LinkedIn outreach</h3>
+        <p>Qualified conversations from the platform where your buyers already work. Choose the approach that fits who you are reaching.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="LinkedIn outreach approach">
+            <button role="tab" id="t-li-manual" aria-selected="true" aria-controls="li-manual">Manual</button>
+            <button role="tab" id="t-li-auto" aria-selected="false" aria-controls="li-auto" tabindex="-1">Automated</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="li-manual" aria-labelledby="t-li-manual">
+            <p>Every message is written and sent by a person to a hand-picked list. Slower and more personal, built for senior and high-value buyers.</p>
+            <ul class="ticks"><li>Hand-picked prospect list built around your ideal client</li><li>Messages written one at a time</li><li>Replies turned into booked calls</li></ul>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="li-auto" aria-labelledby="t-li-auto" hidden>
+            <p>Sequenced, paced outreach that reaches more of your market, with a person reviewing replies before anything reaches your team.</p>
+            <ul class="ticks"><li>Targeted lists and tested message sequences</li><li>Pacing set conservatively</li><li>Qualified replies routed to your calendar</li></ul>
+          </div>
+        </div>
+        <div class="pc-foot"><span class="pc-price">Scoped on a call</span><a class="link" href="#contact">Book a call</a></div>
+      </article>
+
+      <article class="pcard p-ads reveal" id="p-ads">
+        <div class="pc-top"><span class="pc-tag">03 · Google Ads</span><span class="pc-chip">New</span></div>
+        <svg class="pc-ic" viewBox="0 0 100 100" aria-hidden="true"><circle cx="24" cy="24" r="15"/><circle cx="61" cy="24" r="15"/><circle cx="24" cy="61" r="15"/><path d="M46,46 L76,46 L46,76 Z"/><path d="M92,92 L62,92 L92,62 Z"/></svg>
+        <h3>Google Ads, B2B and B2C</h3>
+        <p>Campaigns and landing pages built to produce booked calls, bookings and qualified leads, tracked on what actually converts.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Google Ads audience">
+            <button role="tab" id="t-ads-b2b" aria-selected="true" aria-controls="ads-b2b">B2B</button>
+            <button role="tab" id="t-ads-b2c" aria-selected="false" aria-controls="ads-b2c" tabindex="-1">B2C</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="ads-b2b" aria-labelledby="t-ads-b2b">
+            <p>Search campaigns built around buying intent, with a landing page that qualifies the visit before it books a call.</p>
+            <ul class="ticks"><li>Intent-led search campaigns</li><li>Landing pages that qualify before they book</li><li>Reporting on cost per booked call</li></ul>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="ads-b2c" aria-labelledby="t-ads-b2c" hidden>
+            <p>Local and national campaigns built around the offer, with a fast path to booking or purchase.</p>
+            <ul class="ticks"><li>Offer-led search and local campaigns</li><li>Booking and checkout paths that don't leak</li><li>Reporting on cost per booking or sale</li></ul>
+          </div>
+        </div>
+        <div class="pc-foot"><span class="pc-price">Scoped on a call</span><a class="link" href="#contact">Book a call</a></div>
+      </article>
+
+      <article class="pcard p-web reveal" id="p-web" style="--d:80ms">
+        <div class="pc-top"><span class="pc-tag">04 · Web</span><span class="pc-chip">Most popular</span></div>
+        <div class="split">
+          <div style="display:grid;gap:16px">
+            <svg class="pc-ic" viewBox="0 0 100 100" aria-hidden="true"><path d="M18,58 A32,32 0 0 1 82,58 Z"/><path d="M8,92 L8,80 A14,14 0 0 1 36,80 L36,92 Z"/><path d="M36,92 L36,80 A14,14 0 0 1 64,80 L64,92 Z"/><path d="M64,92 L64,80 A14,14 0 0 1 92,80 L92,92 Z"/></svg>
+            <h3>Web development</h3>
+            <p>Fast, clean sites that load, convert, and stay easy to update. Built in days, not quarters.</p>
+            <ul class="ticks">
+              <li>One-pagers in about a week</li>
+              <li>Larger builds scoped to what you need</li>
+              <li>Monthly management available</li>
+            </ul>
+          </div>
+          <div class="browser" aria-hidden="true">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="screen"><div class="l h"></div><div class="l"></div><div class="l"></div><div class="l s"></div><div class="l b"></div></div>
+          </div>
+        </div>
+        <div class="pc-foot"><span class="pc-price">From US$1,000</span><a class="link" href="#contact">Book a call</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <section class="sec panel">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 01 · The problem</span></div>
-    <h2>Most businesses can't stand up outbound on their own.</h2>
+    <div class="marker"><span class="mono"># 02 · The problem</span></div>
+    <h2 class="reveal">Most businesses can't stand up outbound on their own.</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card reveal">
         <h3>You built this on relationships.</h3>
         <p>Real revenue, won over dinners, site visits, and handshake deals. That works, until you're the bottleneck. Every new opportunity still needs you in the room, and there's one of you.</p>
       </div>
-      <div class="card">
+      <div class="card reveal" style="--d:80ms">
         <h3>You've been held hostage before.</h3>
         <p>The industry standard is a freelancer running your outbound on accounts you don't control. Then the invoice dispute happens, and your pipeline disappears overnight. You've heard the stories.</p>
       </div>
-      <div class="card">
+      <div class="card reveal" style="--d:160ms">
         <h3>You're getting outworked.</h3>
         <p>Your competitors have outbound sales systems firing every morning. You have a capable sales team waiting for the phone to ring.</p>
       </div>
@@ -440,11 +689,11 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 
 <section class="sec" id="system">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 02 · What we build</span></div>
-    <h2>It's a system, not a tactic.</h2>
-    <p class="lede">Outbound only works when every layer works. Get one wrong and the whole thing underperforms, and you won't know which one it was. We've already walked the minefield. We build the complete funnel and wire it into the sales team you already have.</p>
+    <div class="marker"><span class="mono"># 03 · What we build</span></div>
+    <h2 class="reveal">It's a system, not a tactic.</h2>
+    <p class="lede reveal">Outbound only works when every layer works. Get one wrong and the whole thing underperforms, and you won't know which one it was. We've already walked the minefield. We build the complete funnel and wire it into the sales team you already have.</p>
     <div class="rail">
-      <div class="layer">
+      <div class="layer reveal">
         <svg viewBox="0 0 100 100" role="img" aria-label="Icon: three arched inbox forms">
           <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
             <path d="M8,92 L8,50 A14,14 0 0 1 36,50 L36,92 Z"/>
@@ -454,7 +703,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         </svg>
         <span class="idx">01</span><h3>Domains &amp; inboxes</h3><p>Separate sending infrastructure. Your main domain never takes a risk.</p>
       </div>
-      <div class="layer">
+      <div class="layer reveal" style="--d:70ms">
         <svg viewBox="0 0 100 100" role="img" aria-label="Icon: sun rising over scalloped edge">
           <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
             <path d="M18,58 A32,32 0 0 1 82,58 Z"/>
@@ -465,7 +714,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         </svg>
         <span class="idx">02</span><h3>Warm-up &amp; deliverability</h3><p>The unglamorous eight weeks that decide whether anything gets seen.</p>
       </div>
-      <div class="layer">
+      <div class="layer reveal" style="--d:140ms">
         <svg viewBox="0 0 100 100" role="img" aria-label="Icon: grid of circles with one segmented diagonal cell">
           <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
             <circle cx="24" cy="24" r="15"/><circle cx="61" cy="24" r="15"/>
@@ -476,7 +725,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         </svg>
         <span class="idx">03</span><h3>Lead data &amp; segmentation</h3><p>Verified contacts matched to your ICP, sourced through our proprietary Enterprise backend.</p>
       </div>
-      <div class="layer">
+      <div class="layer reveal" style="--d:210ms">
         <svg viewBox="0 0 100 100" role="img" aria-label="Icon: quarter circles stepping diagonally">
           <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
             <path d="M8,8 L40,8 A32,32 0 0 1 8,40 Z"/>
@@ -486,7 +735,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         </svg>
         <span class="idx">04</span><h3>Sequencing</h3><p>Email sequencing and LinkedIn touches, timed and tested. Digital brochures, not spam.</p>
       </div>
-      <div class="layer">
+      <div class="layer reveal" style="--d:280ms">
         <svg viewBox="0 0 100 100" role="img" aria-label="Icon: funnel of shapes narrowing to one qualified form">
           <g fill="#111113" stroke="#FFFFFF" stroke-width="1">
             <path d="M8,8 L36,8 L36,36 A28,28 0 0 1 8,8 Z"/>
@@ -505,22 +754,22 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 
 <section class="sec panel" id="why">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 03 · Why Hash Brown</span></div>
-    <div class="why">
+    <div class="marker"><span class="mono"># 04 · Why Hash Brown</span></div>
+    <div class="why reveal">
       <div>
         <h3>Digital brochures, not AI spam.</h3>
         <p>You've received them. Over-personalized AI emails that have researched your entire background. Fake familiarity that everyone can see straight through. We use the tools, AI included, but we don't fake a relationship that isn't there. We send digital brochures instead: clean, brand-forward, honest outreach on automation that has worked for a decade. The plumber's flyer on your door: you don't need it until the pipe leaks, and then you call the name you already know.</p>
       </div>
       <div class="img filled"><img src="assets/hb-asset-02-noise-signal.svg" alt="Two panels: a dense, crowded field of shapes (spam) beside a single clean, considered form (a brand message)."></div>
     </div>
-    <div class="why">
+    <div class="why reveal">
       <div>
         <h3>You keep the keys.</h3>
         <p>Everything we build is built in your house. Your domains. Your inboxes. Your workspace. Your data. When the engagement ends, the system stays, documented and handed over. Nobody can hold your pipeline hostage, including us.</p>
       </div>
       <div class="img filled"><img src="assets/hb-asset-03-handover.svg" alt="Five identical four-petal forms in a row, shifting from solid black to outline, what we build becoming what you own."></div>
     </div>
-    <div class="why">
+    <div class="why reveal">
       <div>
         <h3>Two founders. One client at a time.</h3>
         <p>When you work with Hash Brown you work with Monty and Tom. Not an account manager reading your file, not a pod, not a platform. Two people who build the system, watch it run, and answer their own phone.</p>
@@ -530,7 +779,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         <figure><picture><source srcset="assets/founders/tom-bw.webp" type="image/webp"><img src="assets/founders/tom-bw.jpg" alt="Tom, co-founder" loading="lazy" width="600" height="600"></picture><figcaption>Tom</figcaption></figure>
       </div>
     </div>
-    <div class="why">
+    <div class="why reveal">
       <div>
         <h3>Priced for businesses that do real deals.</h3>
         <p>Our clients close contracts in the high six and seven figures. Against one deal like that, a properly built outbound system pays for itself. Your time is valuable. You should only be talking to qualified leads.</p>
@@ -542,24 +791,36 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 
 <section class="sec" id="solutions">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 04 · How it works</span></div>
-    <h2>Discover. Build. Hand over.</h2>
-    <table class="spec">
-      <tr><th scope="row">01</th><td class="name">Discover</td><td>A 60 min call with the founders. We map your sales motion, your ticket size, and your capacity to receive leads. If we find that you do not need this system, we will suggest other solutions.</td></tr>
-      <tr><th scope="row">02</th><td class="name">Build or train</td><td><strong>Done-For-You</strong>: we build the complete system, roughly eight weeks including warm-up. <strong>Do-It-With-You</strong>: we train your team to run it on tools you buy and own.</td></tr>
-      <tr><th scope="row">03</th><td class="name">Hand over</td><td>Documentation, credentials, and a working system in your hands. You own it. We stay available.</td></tr>
-    </table>
+    <div class="marker"><span class="mono"># 05 · How it works</span></div>
+    <h2 class="reveal">Discover. Build. Hand over.</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>Discover</h3>
+        <p>A 60 min call with the founders. We map your sales motion, your ticket size, and your capacity to receive leads. If we find that you do not need this system, we will suggest other solutions.</p>
+      </div>
+      <div class="step reveal" style="--d:90ms">
+        <span class="n">02</span>
+        <h3>Build or train</h3>
+        <p><strong>Done-For-You</strong>: we build the complete system, roughly eight weeks including warm-up. <strong>Do-It-With-You</strong>: we train your team to run it on tools you buy and own. LinkedIn, Google Ads and web work is scoped on the call.</p>
+      </div>
+      <div class="step reveal" style="--d:180ms">
+        <span class="n">03</span>
+        <h3>Hand over</h3>
+        <p>Documentation, credentials, and a working system in your hands. You own it. We stay available.</p>
+      </div>
+    </div>
     <a class="after-link" href="#contact">Book a discovery call →</a>
   </div>
 </section>
 
 <section class="sec panel" id="pricing">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 05 · Pricing</span></div>
-    <h2>Priced in the open.</h2>
-    <p class="lede">Our clients are operators who hate "book a demo to see pricing" as much as we do. So here it is. A properly built outbound system pays for itself.</p>
+    <div class="marker"><span class="mono"># 06 · Pricing</span></div>
+    <h2 class="reveal">Priced in the open.</h2>
+    <p class="lede reveal">Our clients are operators who hate "book a demo to see pricing" as much as we do. So here it is. A properly built outbound system pays for itself. Where the scope sets the price, we say so and quote it after the discovery call.</p>
     <div class="pricing-grid">
-      <div class="price">
+      <div class="price reveal">
         <span class="tier">Done-For-You</span>
         <div class="amt">US$6,000<small> one-time</small></div>
         <div class="unit">Complete build, roughly eight weeks including warm-up.</div>
@@ -571,7 +832,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         </ul>
         <a class="btn" href="#contact">Book a call</a>
       </div>
-      <div class="price">
+      <div class="price reveal" style="--d:90ms">
         <span class="tier">Do-It-With-You Consulting</span>
         <div class="amt">US$200<small> / hour</small></div>
         <div class="unit">Or US$750 / month for four sessions <span class="save">Save $50</span></div>
@@ -584,16 +845,28 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         <a class="btn" href="#contact">Book a call</a>
       </div>
     </div>
-    <div class="price-highlight">
-      <div class="ph-copy">
+    <div class="price-mini">
+      <div class="pm hot reveal">
         <span class="tag">Most popular</span>
-        <h3>Web Development</h3>
+        <span class="tier">Web Development</span>
         <div class="amt">US$1,000<small> and up</small></div>
         <p>Scoped to what you need. A one-pager can ship in about a week. Bigger builds and ongoing monthly management are available too.</p>
+        <a class="btn light" href="#contact">Book a call</a>
       </div>
-      <a class="btn" href="#contact">Book a call</a>
+      <div class="pm reveal" style="--d:90ms">
+        <span class="tier">LinkedIn outreach</span>
+        <div class="amt">Scoped<small> on a call</small></div>
+        <p>Manual or automated, quoted after the discovery call against who you are reaching and how many.</p>
+        <a class="btn" href="#contact">Book a call</a>
+      </div>
+      <div class="pm reveal" style="--d:180ms">
+        <span class="tier">Google Ads</span>
+        <div class="amt">Scoped<small> on a call</small></div>
+        <p>B2B or B2C, quoted after the discovery call against your offer and what a booked call is worth.</p>
+        <a class="btn" href="#contact">Book a call</a>
+      </div>
     </div>
-    <div class="price-notes-box">
+    <div class="price-notes-box reveal">
       <p>No hidden costs. Do-It-With-You clients buy their own tools; we spec the stack before you spend anything. Done-For-You includes the infrastructure in the build.</p>
       <p>Nonprofit, impact organisation, or artist doing the right thing? We're open to discounts and collaborations on a case-by-case basis, some of it performance-based. We're always down to help, even if that's just a short email back and forth. Ask on the call.</p>
     </div>
@@ -602,50 +875,53 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 
 <section class="sec" id="services">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 06 · Beyond outbound</span></div>
-    <h2>Outbound is the core. It isn't all we do.</h2>
-    <p class="lede">The same operators who need outbound usually need a few other business systems built properly. If it drives qualified pipeline, we can build it with you.</p>
+    <div class="marker"><span class="mono"># 07 · The rest of the pipeline</span></div>
+    <h2 class="reveal">Outbound is the core. It isn't all we do.</h2>
+    <p class="lede reveal">The same operators who need qualified conversations usually need a few other business systems built properly. If it drives qualified pipeline, we can build it with you.</p>
     <div class="services">
-      <div class="service"><h3>Web development</h3><p>Fast, clean sites that load, convert, and stay easy to update. Built in days, not quarters.</p></div>
-      <div class="service"><h3>SEO</h3><p>The long game, done properly. Content and technical work that compounds into organic leads you never pay per click for.</p></div>
-      <div class="service"><h3>Content &amp; storytelling</h3><p>The brand writing that makes cold outreach land warm and gives buyers a reason to trust you.</p></div>
-      <div class="service"><h3>Email flows &amp; nurture</h3><p>Signup-triggered sequences, newsletters, and warm follow-up that keep leads moving without someone chasing each one by hand.</p></div>
-      <div class="service"><h3>LinkedIn outreach</h3><p>Considered, brand-forward outreach on LinkedIn, wired into the same funnel as your email.</p></div>
-      <div class="service"><h3>Paid advertising</h3><p>Paid campaigns when they earn their place, measured against real pipeline rather than vanity clicks.</p></div>
-      <div class="service"><h3>CRM &amp; automation</h3><p>The pipeline plumbing behind the scenes, set up so leads never fall through the cracks.</p></div>
-      <div class="service"><h3>LLM search visibility</h3><p>Getting your brand cited by AI search and LLMs, where more of your buyers now start looking.</p></div>
-      <div class="service"><h3>Strategy &amp; consulting</h3><p>Where pipeline should come from, in what order, and what it's worth. The plan before the build.</p></div>
+      <div class="service reveal"><h3>SEO</h3><p>The long game, done properly. Content and technical work that compounds into organic leads you never pay per click for.</p></div>
+      <div class="service reveal" style="--d:70ms"><h3>Content &amp; storytelling</h3><p>The brand writing that makes cold outreach land warm and gives buyers a reason to trust you.</p></div>
+      <div class="service reveal" style="--d:140ms"><h3>Email flows &amp; nurture</h3><p>Signup-triggered sequences, newsletters, and warm follow-up that keep leads moving without someone chasing each one by hand.</p></div>
+      <div class="service reveal"><h3>CRM &amp; automation</h3><p>The pipeline plumbing behind the scenes, set up so leads never fall through the cracks.</p></div>
+      <div class="service reveal" style="--d:70ms"><h3>LLM search visibility</h3><p>Getting your brand cited by AI search and LLMs, where more of your buyers now start looking.</p></div>
+      <div class="service reveal" style="--d:140ms"><h3>Strategy &amp; consulting</h3><p>Where pipeline should come from, in what order, and what it's worth. The plan before the build.</p></div>
     </div>
   </div>
 </section>
 
-<section aria-label="Statistics">
-  <div class="stats" style="grid-template-columns:repeat(3,1fr)">
-    <div class="stat"><div class="num">100%</div><div class="lab">primary-inbox deliverability, cold outbound using best practices</div></div>
-    <div class="stat"><div class="num">500K+</div><div class="lab">impressions and 12,000+ clicks for client brands</div></div>
-    <div class="stat"><div class="num">90%</div><div class="lab">cheaper lead scraping stack compared to other agencies</div></div>
+<section class="sec" aria-label="Statistics" style="padding-top:0">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lab">primary-inbox deliverability, cold outbound using best practices</div></div>
+      <div class="stat"><div class="num" data-count="500" data-suffix="K+">500K+</div><div class="lab">impressions and 12,000+ clicks for client brands</div></div>
+      <div class="stat"><div class="num" data-count="90" data-suffix="%">90%</div><div class="lab">cheaper lead scraping stack compared to other agencies</div></div>
+    </div>
   </div>
 </section>
 
-<section class="sec" id="case">
+<section class="sec panel" id="case">
   <div class="wrap case">
-    <div class="marker"><span class="mono"># 07 · In practice</span></div>
-    <blockquote>The work speaks. The names stay private.</blockquote>
+    <div class="marker"><span class="mono"># 08 · In practice</span></div>
+    <blockquote class="reveal">The work speaks. The names stay private.</blockquote>
     <p style="max-width:62ch">We keep client relationships confidential and talk about the work at the industry level. Here's the shape of it, without the logos.</p>
     <div class="cards cases-4" style="margin-top:36px">
-      <div class="card">
+      <div class="card reveal">
+        <span class="chip">Hospitality</span>
         <h3>F&amp;B and hospitality group</h3>
         <p>Two venues and a B2B food and beverage company under one group. We work as their strategy and consulting arm: brand storytelling, content, web development, and the sales systems behind the operation.</p>
       </div>
-      <div class="card">
+      <div class="card reveal" style="--d:80ms">
+        <span class="chip">Apparel</span>
         <h3>Apparel brand</h3>
         <p>A bootstrapped apparel brand doubled revenue in under a year and expanded from one location to three, built on search-first content and outbound, not ad spend.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
+        <span class="chip">Audio production</span>
         <h3>Audio-production studio</h3>
         <p>A studio needed a credible web presence fast, with no time to lose to a drawn-out agency process. We scoped, built, and shipped it in under two days.</p>
       </div>
-      <div class="card">
+      <div class="card reveal" style="--d:80ms">
+        <span class="chip">Manufacturing</span>
         <h3>B2B manufacturer</h3>
         <p>A sustainable B2B manufacturer built its lead engine on ten years of consistent SEO storytelling and brand work: 98% of leads organic, around 1,500 visitors a month from search, converting through to sales at zero ad spend.</p>
       </div>
@@ -654,11 +930,11 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
   </div>
 </section>
 
-<section class="sec panel" id="qualify">
+<section class="sec" id="qualify">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 08 · Is this for you</span></div>
+    <div class="marker"><span class="mono"># 09 · Is this for you</span></div>
     <div class="qual">
-      <div>
+      <div class="reveal">
         <h3>This is for you if</h3>
         <ul>
           <li>You run an established business with real ticket sizes</li>
@@ -667,7 +943,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
           <li>You want to own the system, not rent it</li>
         </ul>
       </div>
-      <div>
+      <div class="reveal" style="--d:90ms">
         <h3>This is not for you if</h3>
         <ul>
           <li>You're pre-revenue</li>
@@ -680,9 +956,9 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
   </div>
 </section>
 
-<section class="sec" id="faq">
+<section class="sec panel" id="faq">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 09 · Questions</span></div>
+    <div class="marker"><span class="mono"># 10 · Questions</span></div>
     <div style="max-width:820px">
       <div class="faq-item">
         <button aria-expanded="false">How fast do results come?</button>
@@ -691,6 +967,14 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
       <div class="faq-item">
         <button aria-expanded="false">Do you write emails with AI?</button>
         <div class="faq-a"><p>We use AI as a tool, the same as any serious operator. What we don't do is fake personalization with over-the-top research of your entire background. We treat a cold email as a digital brochure: clean, brand-forward, and honest about what it is. The approach matters more than the tool.</p></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false">What is the difference between manual and automated LinkedIn outreach?</button>
+        <div class="faq-a"><p>Manual means every message is written and sent by a person to a hand-picked list, which suits senior and high-value buyers. Automated means sequenced, paced outreach that reaches more of your market, with a person reviewing replies before anything reaches your team. Some set-ups use both: manual for a short list of key accounts and automated for the wider market.</p></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false">Do you run Google Ads for consumer businesses as well as B2B?</button>
+        <div class="faq-a"><p>Yes. The setup differs. B2B campaigns are built around buying intent and a landing page that qualifies the visit before it books a call. B2C campaigns are built around the offer, local intent and a fast path to booking or purchase. Both are measured on what matters to you, booked calls, bookings or sales, not clicks.</p></div>
       </div>
       <div class="faq-item">
         <button aria-expanded="false">Who owns the system afterward?</button>
@@ -711,7 +995,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
 <!-- ===================== LEAD / CONTACT FORM ===================== -->
 <section class="sec contact" id="contact">
   <div class="wrap">
-    <div class="marker"><span class="mono"># 10 · Book a call</span></div>
+    <div class="marker"><span class="mono"># 11 · Book a call</span></div>
     <div class="contact-grid">
       <div class="contact-copy">
         <h2>Tell us what your problem is.</h2>
@@ -751,7 +1035,7 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
   <svg class="final-crop" viewBox="0 0 220 320" aria-hidden="true"><use href="#hb-mark"/></svg>
   <div class="wrap">
     <h2>Stop talking to everyone. Start talking to buyers.</h2>
-    <p style="margin:32px 0 0"><a class="btn" style="background:#fff;color:var(--black)" href="#contact">Book a call</a></p>
+    <p style="margin:32px 0 0"><a class="btn light" href="#contact">Book a call</a></p>
     <p class="micro">60 minute discovery call. We'll tell you in one call if this isn't a fit.</p>
   </div>
 </section>
@@ -764,21 +1048,21 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
           <svg class="mark" viewBox="0 0 220 320" style="height:24px" aria-hidden="true"><use href="#hb-mark" fill="#FFFFFF"/></svg>
           Hash Brown
         </div>
-        <p>B2B outbound systems, built in Asia Pacific. The perfect side to your business.</p>
+        <p>Booked calls and qualified leads, built in Asia Pacific. The perfect side to your business.</p>
       </div>
       <div>
         <h4>Site</h4>
-        <a href="#system">The System</a><a href="#solutions">Solutions</a><a href="#qualify">Industries</a><a href="#pricing">Pricing</a><a href="#case">Case Studies</a><a href="#why">About</a><a href="/blog/">Blog</a><a href="#faq">FAQ</a>
+        <a href="/#products">Products</a><a href="/#system">The System</a><a href="/#solutions">How it works</a><a href="/#pricing">Pricing</a><a href="/#case">Case Studies</a><a href="/#why">About</a><a href="/blog/">Blog</a><a href="/#faq">FAQ</a>
       </div>
       <div>
-        <h4>Solutions</h4>
-        <a href="#pricing">Done-For-You</a><a href="#pricing">Do-It-With-You</a><a href="#pricing">Consulting</a>
+        <h4>Products</h4>
+        <a href="/#p-outbound">Outbound systems</a><a href="/#p-linkedin">LinkedIn outreach</a><a href="/#p-ads">Google Ads</a><a href="/#p-web">Web development</a>
       </div>
       <div>
         <h4>Founders</h4>
         <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
         <h4 style="margin-top:22px">Contact</h4>
-        <a href="#contact">Book a call</a>
+        <a href="/#contact">Book a call</a>
       </div>
     </div>
     <div class="legal">
@@ -816,6 +1100,72 @@ document.querySelectorAll('.faq-item button').forEach(function(b){
       toggle.setAttribute('aria-expanded','false');
     });
   });
+})();
+
+/* ---- Product tabs (LinkedIn manual/automated, Google Ads B2B/B2C) ---- */
+document.querySelectorAll('[data-tabs]').forEach(function(box){
+  var tabs=[].slice.call(box.querySelectorAll('[role=tab]'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+      var p=document.getElementById(x.getAttribute('aria-controls'));
+      if(p)p.hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
+        n.focus();select(n);
+      }
+    });
+  });
+});
+
+/* ---- Logo marquee: duplicate the set for a seamless loop ---- */
+(function(){
+  var track=document.getElementById('logoTrack');
+  if(!track)return;
+  [].slice.call(track.children).forEach(function(n){
+    var c=n.cloneNode(true);
+    c.classList.add('clone');
+    c.setAttribute('aria-hidden','true');
+    c.querySelectorAll('img').forEach(function(i){i.alt='';i.removeAttribute('loading')});
+    track.appendChild(c);
+  });
+})();
+
+/* ---- Scroll reveal ---- */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* ---- Stat count-up ---- */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('[data-count]'));
+  if(!els.length||!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+  function run(el){
+    var to=+el.getAttribute('data-count'),suf=el.getAttribute('data-suffix')||'',t0=null,dur=1400;
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min((t-t0)/dur,1);
+      el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+suf;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);run(e.target);}});
+  },{threshold:.6});
+  els.forEach(function(el){io.observe(el)});
 })();
 
 /* ---- Lead form ---- */
