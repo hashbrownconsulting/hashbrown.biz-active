@@ -91,16 +91,30 @@ picture{display:contents}
 .btn.sm{padding:11px 20px;font-size:13px}
 .btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--black);outline-offset:3px}
 
-/* NAV: floating pill */
+/* NAV: floating pill with dropdowns */
 nav{position:sticky;top:0;z-index:50;padding:12px var(--pad) 0;pointer-events:none}
-.nav-in{pointer-events:auto;position:relative;max-width:var(--max);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 22px;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(17,17,19,.08);border-radius:999px;box-shadow:var(--shadow)}
+.nav-in{pointer-events:auto;position:relative;max-width:var(--max);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 22px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(17,17,19,.08);border-radius:999px;box-shadow:var(--shadow)}
 .wordmark{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.01em;color:var(--black);text-decoration:none}
 .nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);transition:color .15s}
-.nav-links a:hover{color:var(--black)}
-.nav-links .btn{color:#fff}
+.nav-links > a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);transition:color .15s}
+.nav-links > a:hover{color:var(--black)}
+.nav-links > .btn{color:#fff}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;margin-right:6px;color:var(--black)}
 .nav-toggle svg{display:block;width:26px;height:26px}
+.dd{position:relative}
+.dd-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;font:inherit;font-size:14px;font-weight:500;color:var(--ink);padding:8px 0;transition:color .15s}
+.dd-btn:hover,.dd.open .dd-btn{color:var(--black)}
+.dd-btn .chev{width:10px;height:7px;transition:transform .25s var(--ease)}
+.dd.open .dd-btn .chev{transform:rotate(180deg)}
+.dd-menu{position:absolute;top:calc(100% + 18px);left:-18px;min-width:330px;padding:10px;background:#fff;border:1px solid var(--rule);border-radius:var(--r);box-shadow:var(--shadow);display:none;gap:2px;z-index:5}
+.dd-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.dd-menu a{display:block;padding:12px 14px;border-radius:12px;text-decoration:none;color:var(--black);transition:background .15s}
+.dd-menu a:hover{background:var(--panel)}
+.dd-menu a b{display:block;font-size:14px;font-weight:700}
+.dd-menu a span{display:block;font-size:12.5px;font-weight:400;color:var(--ghost);margin-top:1px}
+.dd-menu a.all{margin-top:4px;padding-top:14px;border-top:1px solid var(--rule);border-radius:0 0 12px 12px;font-size:14px;font-weight:700}
+.dd.open .dd-menu{display:grid}
+@media(hover:hover) and (min-width:961px){.dd:hover .dd-menu{display:grid}.dd:hover .dd-btn{color:var(--black)}.dd:hover .chev{transform:rotate(180deg)}}
 @media(max-width:960px){
   .nav-toggle{display:inline-flex}
   .nav-links{
@@ -108,11 +122,20 @@ nav{position:sticky;top:0;z-index:50;padding:12px var(--pad) 0;pointer-events:no
     flex-direction:column;align-items:stretch;gap:0;
     background:#fff;border:1px solid var(--rule);border-radius:var(--r);
     padding:8px 22px 20px;box-shadow:var(--shadow);display:none;
+    max-height:calc(100vh - 100px);overflow:auto;
   }
   .nav-links.open{display:flex}
-  .nav-links a{padding:14px 0;font-size:16px;border-bottom:1px solid var(--rule)}
-  .nav-links a:last-child{border-bottom:0}
-  .nav-links .btn{margin-top:14px;padding:15px 20px;font-size:15px;text-align:center}
+  .nav-links > a{padding:14px 0;font-size:16px;border-bottom:1px solid var(--rule)}
+  .nav-links > a:last-child{border-bottom:0}
+  .nav-links > .btn{margin-top:14px;padding:15px 20px;font-size:15px;text-align:center}
+  .dd-btn{width:100%;justify-content:space-between;padding:14px 0;font-size:16px;border-bottom:1px solid var(--rule)}
+  .dd-menu{position:static;min-width:0;padding:4px 0 8px 12px;box-shadow:none;border:0;border-radius:0;background:transparent}
+  .dd-menu::before{display:none}
+  .dd-menu a{padding:11px 0;border-radius:0}
+  .dd-menu a:hover{background:transparent}
+  .dd-menu a b{font-weight:600;font-size:15px}
+  .dd-menu a span{display:none}
+  .dd-menu a.all{border-top:0;margin-top:0;padding-top:11px}
 }
 
 /* SCALLOP RULE */
@@ -202,15 +225,60 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
       </svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="/#products">Products</a>
-      <a href="/#system">The System</a>
-      <a href="/#pricing">Pricing</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Services <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/services/outbound-systems/"><b>Outbound systems</b><span>Email and LinkedIn built as one system</span></a>
+          <a href="/services/linkedin-outreach/"><b>LinkedIn outreach</b><span>Manual or automated, to booked calls</span></a>
+          <a href="/services/google-ads/"><b>Google Ads</b><span>B2B and B2C search campaigns</span></a>
+          <a href="/services/meta-ads/"><b>Meta Ads</b><span>Facebook and Instagram campaigns</span></a>
+          <a href="/services/web-development/"><b>Web development</b><span>Sites that convert, from US$1,000</span></a>
+          <a class="all" href="/services/">All services</a>
+        </div>
+      </div>
+      <a href="/pricing/">Pricing</a>
       <a href="/#case">Case Studies</a>
-      <a href="/#why">About</a>
-      <a href="/blog/">Blog</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/about/"><b>About</b><span>Two founders, one client at a time</span></a>
+          <a href="/#solutions"><b>How it works</b><span>Discover, build, hand over</span></a>
+          <a href="/#faq"><b>Questions</b><span>The things people ask first</span></a>
+          <a href="/#contact"><b>Contact</b><span>Book a discovery call</span></a>
+        </div>
+      </div>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/blog/"><b>Blog</b><span>Notes on outbound that actually works</span></a>
+          <a href="/blog/cold-outreach-guide/"><b>Cold outreach guide</b><span>Doing it properly, in order</span></a>
+          <a href="/blog/what-is-a-sales-discovery-call/"><b>Discovery call guide</b><span>How to run one that qualifies</span></a>
+          <a href="/blog/lead-follow-up/"><b>Lead follow-up</b><span>How fast, how often, when to stop</span></a>
+        </div>
+      </div>
       <a class="btn sm" href="/#contact">Book a call</a>
     </div>
   </div>
+  <script>
+  (function(){
+    var nav=document.currentScript.parentNode,t=nav.querySelector('#navToggle'),l=nav.querySelector('#navLinks');
+    if(!t||!l)return;
+    var dds=[].slice.call(nav.querySelectorAll('.dd'));
+    function closeAll(except){dds.forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false');}});}
+    t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');if(!o)closeAll();});
+    dds.forEach(function(d){
+      var b=d.querySelector('.dd-btn');
+      b.addEventListener('click',function(e){
+        e.stopPropagation();
+        var o=!d.classList.contains('open');
+        closeAll(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');
+      });
+    });
+    document.addEventListener('click',function(e){if(!nav.contains(e.target))closeAll();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();l.classList.remove('open');t.setAttribute('aria-expanded','false');}});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded','false');closeAll();});});
+  })();
+  </script>
 </nav>
 
 <main class="wrap">
@@ -252,18 +320,18 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
         <p>Booked calls and qualified leads, built in Asia Pacific. The perfect side to your business.</p>
       </div>
       <div>
-        <h4>Site</h4>
-        <a href="/#products">Products</a><a href="/#system">The System</a><a href="/#solutions">How it works</a><a href="/#pricing">Pricing</a><a href="/#case">Case Studies</a><a href="/#why">About</a><a href="/blog/">Blog</a><a href="/#faq">FAQ</a>
+        <h4>Services</h4>
+        <a href="/services/outbound-systems/">Outbound systems</a><a href="/services/linkedin-outreach/">LinkedIn outreach</a><a href="/services/google-ads/">Google Ads</a><a href="/services/meta-ads/">Meta Ads</a><a href="/services/web-development/">Web development</a>
       </div>
       <div>
-        <h4>Products</h4>
-        <a href="/#p-outbound">Outbound systems</a><a href="/#p-linkedin">LinkedIn outreach</a><a href="/#p-ads">Google Ads</a><a href="/#p-web">Web development</a>
+        <h4>Company</h4>
+        <a href="/about/">About</a><a href="/pricing/">Pricing</a><a href="/#case">Case Studies</a><a href="/#solutions">How it works</a><a href="/#faq">FAQ</a><a href="/#contact">Book a call</a>
       </div>
       <div>
-        <h4>Founders</h4>
+        <h4>Resources</h4>
+        <a href="/blog/">Blog</a><a href="/blog/cold-outreach-guide/">Cold outreach guide</a><a href="/blog/follow-up-email-after-sales-call/">Follow-up emails</a><a href="/blog/best-time-to-send-cold-email/">Best time to send</a>
+        <h4 style="margin-top:22px">Founders</h4>
         <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
-        <h4 style="margin-top:22px">Contact</h4>
-        <a href="/#contact">Book a call</a>
       </div>
     </div>
     <div class="legal">
@@ -273,11 +341,5 @@ footer{background:var(--black);color:#9696A1;border-top:1px solid #26262B;font-s
   </div>
 </footer>
 
-<script>
-(function(){
-  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-  if(t&&l)t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
-})();
-</script>
 </body>
 </html>

@@ -10,13 +10,58 @@
       </svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="/#products">Products</a>
-      <a href="/#system">The System</a>
-      <a href="/#pricing">Pricing</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Services <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/services/outbound-systems/"><b>Outbound systems</b><span>Email and LinkedIn built as one system</span></a>
+          <a href="/services/linkedin-outreach/"><b>LinkedIn outreach</b><span>Manual or automated, to booked calls</span></a>
+          <a href="/services/google-ads/"><b>Google Ads</b><span>B2B and B2C search campaigns</span></a>
+          <a href="/services/meta-ads/"><b>Meta Ads</b><span>Facebook and Instagram campaigns</span></a>
+          <a href="/services/web-development/"><b>Web development</b><span>Sites that convert, from US$1,000</span></a>
+          <a class="all" href="/services/">All services</a>
+        </div>
+      </div>
+      <a href="/pricing/">Pricing</a>
       <a href="/#case">Case Studies</a>
-      <a href="/#why">About</a>
-      <a href="/blog/">Blog</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/about/"><b>About</b><span>Two founders, one client at a time</span></a>
+          <a href="/#solutions"><b>How it works</b><span>Discover, build, hand over</span></a>
+          <a href="/#faq"><b>Questions</b><span>The things people ask first</span></a>
+          <a href="/#contact"><b>Contact</b><span>Book a discovery call</span></a>
+        </div>
+      </div>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/blog/"><b>Blog</b><span>Notes on outbound that actually works</span></a>
+          <a href="/blog/cold-outreach-guide/"><b>Cold outreach guide</b><span>Doing it properly, in order</span></a>
+          <a href="/blog/what-is-a-sales-discovery-call/"><b>Discovery call guide</b><span>How to run one that qualifies</span></a>
+          <a href="/blog/lead-follow-up/"><b>Lead follow-up</b><span>How fast, how often, when to stop</span></a>
+        </div>
+      </div>
       <a class="btn sm" href="/#contact">Book a call</a>
     </div>
   </div>
+  <script>
+  (function(){
+    var nav=document.currentScript.parentNode,t=nav.querySelector('#navToggle'),l=nav.querySelector('#navLinks');
+    if(!t||!l)return;
+    var dds=[].slice.call(nav.querySelectorAll('.dd'));
+    function closeAll(except){dds.forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false');}});}
+    t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');if(!o)closeAll();});
+    dds.forEach(function(d){
+      var b=d.querySelector('.dd-btn');
+      b.addEventListener('click',function(e){
+        e.stopPropagation();
+        var o=!d.classList.contains('open');
+        closeAll(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');
+      });
+    });
+    document.addEventListener('click',function(e){if(!nav.contains(e.target))closeAll();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();l.classList.remove('open');t.setAttribute('aria-expanded','false');}});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded','false');closeAll();});});
+  })();
+  </script>
 </nav>
