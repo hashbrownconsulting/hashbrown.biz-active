@@ -4,7 +4,7 @@ slug: cold-email-warm-up-how-long
 date: 2026-09-03
 author: Tom
 meta_title: How Long Does Cold Email Warm-Up Actually Take?
-description: The volume ramp takes three to four weeks. The runway from registering a sending domain to sending campaigns that matter is closer to eight. Here is what happens in each of them.
+description: Cold email warm-up takes three to four weeks for the volume ramp, but closer to eight from registering a domain to campaigns that matter.
 excerpt: The ramp takes three to four weeks. The runway from registering a domain to sending anything that matters is closer to eight. Those are two different questions, and the tools answer the first one when you asked the second.
 ---
 

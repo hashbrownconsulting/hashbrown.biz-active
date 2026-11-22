@@ -4,7 +4,7 @@ slug: hello-outbound
 date: 2026-07-20
 author: Tom
 meta_title: Why Most Outbound Fails Before the First Email Sends
-description: The part everyone skips is the part that decides whether anything gets read. A short note on cold email deliverability, domain warm-up, and the eight weeks nobody wants to hear about.
+description: Most outbound fails before the first email sends. A short note on cold email deliverability, domain warm-up and the eight weeks nobody wants to hear about.
 excerpt: The part everyone skips is the part that decides whether anything gets read. A short note on deliverability, warm-up, and the eight weeks nobody wants to hear about.
 ---
 

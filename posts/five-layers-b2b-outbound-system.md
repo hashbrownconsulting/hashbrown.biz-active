@@ -4,7 +4,7 @@ slug: five-layers-b2b-outbound-system
 date: 2026-09-01
 author: Tom
 meta_title: The Five Layers of a B2B Outbound System | Hash Brown
-description: A complete B2B outbound system has five layers: domains, warm-up, lead data, sequencing and reply handling. Here is how each one fails, and how to tell which one is costing you.
+description: A B2B outbound system has five layers: domains, warm-up, lead data, sequencing and reply handling. Here is how each fails and how to find the weak one.
 excerpt: Domains, warm-up, lead data, sequencing, reply handling. Four right and one wrong and the whole thing underperforms, and you will not know which layer did it. Here is the failure mode for each.
 ---
 

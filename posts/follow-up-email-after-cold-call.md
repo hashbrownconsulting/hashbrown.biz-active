@@ -4,7 +4,7 @@ slug: follow-up-email-after-cold-call
 date: 2026-10-20
 author: Tom
 meta_title: The Follow-Up Email After A Cold Call: What To Send And When
-description: After a cold call, send a short email within the hour that references one specific thing and asks for one small next step. Here is what to send if they answered, if they did not, and how many times to follow up.
+description: After a cold call, send a short email within the hour that cites one specific thing and asks one small step. What to send, and when to stop.
 excerpt: Send a short email within the hour, reference one specific thing, ask for one small step. What changes is what you write if they answered, what you write if they did not, and when to stop.
 ---
 

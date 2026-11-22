@@ -4,7 +4,7 @@ slug: cold-email-reply-rate-wrong-number
 date: 2026-09-05
 author: Tom
 meta_title: Why Reply Rate Is the Wrong Cold Email Benchmark
-description: Published B2B cold email reply rate benchmarks range from 0.45% to 5%. That spread is not measurement noise. It is the reason reply rate cannot tell you whether your outbound is working.
+description: Published B2B cold email reply rates range from 0.45% to 5%. That spread is why reply rate cannot tell you whether your outbound is working.
 excerpt: Published benchmarks range from 0.45% to 5%, depending entirely on who is counting and what they count. Here is what the number hides, and the four you should steer by instead.
 ---
 

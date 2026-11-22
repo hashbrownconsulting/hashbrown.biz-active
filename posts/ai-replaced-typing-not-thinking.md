@@ -3,8 +3,8 @@ title: AI Didn't Replace The Thinking This Week. It Replaced The Typing.
 slug: ai-replaced-typing-not-thinking
 date: 2026-09-12
 author: Tom
-meta_title: AI Didn't Replace The Thinking This Week. It Replaced The Typing.
-description: A week of building with AI coding tools didn't make the work cheaper to think through. It removed the typing. Here is what actually happened, and what still has to come from a person.
+meta_title: AI Replaced The Typing, Not The Thinking
+description: A week of building with AI tools removed the typing, not the thinking. What actually happened, and what still has to come from a person.
 excerpt: People assume AI tools mean cutting corners. Here is what a week of building with them actually looked like, and what still has to come from a person.
 ---
 

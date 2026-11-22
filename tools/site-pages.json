@@ -4,8 +4,20 @@
     "title": "About Hash Brown | Two Founders, One Client at a Time"
   },
   {
+    "path": "/services/business-development/",
+    "title": "Outsourced Business Development for B2B | Hash Brown"
+  },
+  {
+    "path": "/services/deal-origination/",
+    "title": "Deal Origination for Commercial Partnerships | Hash Brown"
+  },
+  {
     "path": "/services/google-ads/",
     "title": "Google Ads for B2B and B2C | Hash Brown"
+  },
+  {
+    "path": "/industries/",
+    "title": "Industries: Outbound and Growth by Sector | Hash Brown"
   },
   {
     "path": "/services/linkedin-outreach/",
@@ -20,12 +32,24 @@
     "title": "B2B Outbound Systems and Cold Email Agency | Hash Brown"
   },
   {
+    "path": "/services/performance-marketing/",
+    "title": "Performance Marketing: Google and Meta Ads | Hash Brown"
+  },
+  {
     "path": "/pricing/",
     "title": "Pricing | Priced in the Open | Hash Brown"
   },
   {
+    "path": "/services/seo/",
+    "title": "B2B SEO: Content and Technical SEO | Hash Brown"
+  },
+  {
     "path": "/services/",
-    "title": "Services: Outbound, LinkedIn, Ads and Web | Hash Brown"
+    "title": "Services: Outbound, Ads, SEO and Web | Hash Brown"
+  },
+  {
+    "path": "/industries/telecommunications/",
+    "title": "Telecom Business Development and Outbound | Hash Brown"
   },
   {
     "path": "/services/web-development/",

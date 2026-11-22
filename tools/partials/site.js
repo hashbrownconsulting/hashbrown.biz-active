@@ -74,3 +74,22 @@ document.querySelectorAll('[data-tabs]').forEach(function(box){
   },{threshold:.6});
   els.forEach(function(el){io.observe(el)});
 })();
+
+/* ---- Lead context: remember where a visitor came from, for the lead form and analytics ---- */
+(function(){
+  var K='hb_ctx', ctx={};
+  try{ctx=JSON.parse(sessionStorage.getItem(K)||'{}')||{};}catch(e){ctx={};}
+  var q=new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_industry'].forEach(function(k){if(q.get(k))ctx[k]=q.get(k).slice(0,80);});
+  if(!ctx.landing)ctx.landing=location.pathname;
+  if(!ctx.referrer&&document.referrer){try{ctx.referrer=new URL(document.referrer).hostname;}catch(e){}}
+  var m=location.pathname.match(/^\/(industries|services)\/([a-z0-9-]+)\//);
+  if(m){ctx[m[1]==='industries'?'industry':'service']=m[2];}
+  try{sessionStorage.setItem(K,JSON.stringify(ctx));}catch(e){}
+  window.hbContext=ctx;
+  document.querySelectorAll('a[href$="#contact"],a[href="#contact"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(typeof gtag==='function')gtag('event','cta_click',{page_path:location.pathname,industry:ctx.industry||'',service:ctx.service||''});
+    });
+  });
+})();

@@ -4,7 +4,7 @@ slug: best-time-to-send-cold-email
 date: 2026-10-08
 author: Tom
 meta_title: The Best Time To Send A Cold Email
-description: The best time to send a cold email is Tuesday through Thursday, mid morning in the recipient's time zone, and none of that matters if the sending domain was not warmed up first.
+description: The best time to send a cold email is Tuesday to Thursday, mid morning in the recipient's time zone, but only if the sending domain is warmed up.
 excerpt: Tuesday through Thursday, mid morning, recipient's time zone. That part is the easy answer. The part that actually decides whether the email gets read is not about timing at all.
 ---
 

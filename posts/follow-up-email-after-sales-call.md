@@ -4,7 +4,7 @@ slug: follow-up-email-after-sales-call
 date: 2026-10-08
 author: Tom
 meta_title: What To Put In A Follow-Up Email After A Sales Call
-description: A follow-up email after a sales call needs three things, a recap, a dated next step, and one new piece of value. Here is why most follow-ups get ignored and what actually gets a reply.
+description: A follow-up email after a sales call needs a recap, a dated next step and one new piece of value. Why most get ignored and what gets a reply.
 excerpt: Most follow-up emails get ignored because they skip one of three things, a recap, a dated next step, and a reason to reply beyond checking in. Here is what to put in instead.
 ---
 

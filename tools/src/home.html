@@ -755,6 +755,10 @@ html:not(.js) .track{flex-wrap:wrap;width:auto;row-gap:14px}
           <label for="note">Note <span style="color:var(--ghost)">(optional)</span></label>
           <textarea id="note" name="note" placeholder="What are you trying to fix?"></textarea>
         </div>
+        <div class="field" id="f-heard">
+          <label for="heard">How did you hear about us? <span style="color:var(--ghost)">(optional)</span></label>
+          <input type="text" id="heard" name="heard" autocomplete="off">
+        </div>
         <!-- honeypot: hidden from humans, bots fill it -->
         <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <button type="submit" class="btn" id="leadSubmit">Send &amp; book a call</button>
@@ -837,11 +841,15 @@ html:not(.js) .track{flex-wrap:wrap;width:auto;row-gap:14px}
     body.append('email',elEmail.value.trim());
     body.append('note',elNote.value.trim());
     body.append('page',location.href);
+    var ctx=window.hbContext||{};
+    body.append('heard',(document.getElementById('heard').value||'').trim());
+    ['industry','service','landing','referrer','utm_source','utm_medium','utm_campaign','utm_industry'].forEach(function(k){body.append(k,ctx[k]||'');});
 
     fetch(SCRIPT_URL,{method:'POST',body:body})
       .then(function(r){return r.json()})
       .then(function(data){
         if(data && data.result==='success'){
+          if(typeof gtag==='function')gtag('event','generate_lead',{industry:ctx.industry||'',service:ctx.service||'',landing:ctx.landing||''});
           form.reset();
           showStatus("Thanks, we've got your details. A founder will reply within one business day.",true);
         }else{

@@ -685,10 +685,20 @@ html:not(.js) .tabpanel[hidden]{display:grid}
           <a href="/services/google-ads/"><b>Google Ads</b><span>B2B and B2C search campaigns</span></a>
           <a href="/services/meta-ads/"><b>Meta Ads</b><span>Facebook and Instagram campaigns</span></a>
           <a href="/services/web-development/"><b>Web development</b><span>Sites that convert, from US$1,000</span></a>
+          <a href="/services/business-development/"><b>Business development</b><span>Outsourced commercial pipeline</span></a>
+          <a href="/services/deal-origination/"><b>Deal origination</b><span>Finding the right counterparties</span></a>
+          <a href="/services/seo/"><b>SEO</b><span>Organic search that compounds</span></a>
           <a class="all" href="/services/">All services</a>
         </div>
       </div>
       <a href="/pricing/">Pricing</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Industries <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-menu">
+          <a href="/industries/telecommunications/"><b>Telecommunications</b><span>Carriers, fibre and network suppliers</span></a>
+          <a class="all" href="/industries/">All industries</a>
+        </div>
+      </div>
       <a href="/#case">Case Studies</a>
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -702,7 +712,7 @@ html:not(.js) .tabpanel[hidden]{display:grid}
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="dd-menu">
-          <a href="/blog/"><b>Blog</b><span>Notes on outbound that actually works</span></a>
+          <a href="/blog/"><b>Insights</b><span>Notes on outbound that actually works</span></a>
           <a href="/blog/cold-outreach-guide/"><b>Cold outreach guide</b><span>Doing it properly, in order</span></a>
           <a href="/blog/what-is-a-sales-discovery-call/"><b>Discovery call guide</b><span>How to run one that qualifies</span></a>
           <a href="/blog/lead-follow-up/"><b>Lead follow-up</b><span>How fast, how often, when to stop</span></a>
@@ -929,15 +939,15 @@ html:not(.js) .tabpanel[hidden]{display:grid}
       </div>
       <div>
         <h4>Services</h4>
-        <a href="/services/outbound-systems/">Outbound systems</a><a href="/services/linkedin-outreach/">LinkedIn outreach</a><a href="/services/google-ads/">Google Ads</a><a href="/services/meta-ads/">Meta Ads</a><a href="/services/web-development/">Web development</a>
+        <a href="/services/outbound-systems/">Outbound systems</a><a href="/services/linkedin-outreach/">LinkedIn outreach</a><a href="/services/google-ads/">Google Ads</a><a href="/services/meta-ads/">Meta Ads</a><a href="/services/web-development/">Web development</a><a href="/services/business-development/">Business development</a><a href="/services/deal-origination/">Deal origination</a><a href="/services/seo/">SEO</a><a href="/services/performance-marketing/">Performance marketing</a>
       </div>
       <div>
         <h4>Company</h4>
-        <a href="/about/">About</a><a href="/pricing/">Pricing</a><a href="/#case">Case Studies</a><a href="/#solutions">How it works</a><a href="/#faq">FAQ</a><a href="/#contact">Book a call</a>
+        <a href="/about/">About</a><a href="/industries/">Industries</a><a href="/pricing/">Pricing</a><a href="/#case">Case Studies</a><a href="/#solutions">How it works</a><a href="/#faq">FAQ</a><a href="/#contact">Book a call</a>
       </div>
       <div>
         <h4>Resources</h4>
-        <a href="/blog/">Blog</a><a href="/blog/cold-outreach-guide/">Cold outreach guide</a><a href="/blog/follow-up-email-after-sales-call/">Follow-up emails</a><a href="/blog/best-time-to-send-cold-email/">Best time to send</a>
+        <a href="/blog/">Insights</a><a href="/blog/cold-outreach-guide/">Cold outreach guide</a><a href="/blog/follow-up-email-after-sales-call/">Follow-up emails</a><a href="/blog/best-time-to-send-cold-email/">Best time to send</a>
         <h4 style="margin-top:22px">Founders</h4>
         <a href="https://www.linkedin.com/in/monty-hasan/" target="_blank" rel="noopener">Monty · LinkedIn</a><a href="https://www.linkedin.com/in/thomas-brown-33775912b/" target="_blank" rel="noopener">Tom · LinkedIn</a>
       </div>
@@ -1027,6 +1037,25 @@ document.querySelectorAll('[data-tabs]').forEach(function(box){
     es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);run(e.target);}});
   },{threshold:.6});
   els.forEach(function(el){io.observe(el)});
+})();
+
+/* ---- Lead context: remember where a visitor came from, for the lead form and analytics ---- */
+(function(){
+  var K='hb_ctx', ctx={};
+  try{ctx=JSON.parse(sessionStorage.getItem(K)||'{}')||{};}catch(e){ctx={};}
+  var q=new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_industry'].forEach(function(k){if(q.get(k))ctx[k]=q.get(k).slice(0,80);});
+  if(!ctx.landing)ctx.landing=location.pathname;
+  if(!ctx.referrer&&document.referrer){try{ctx.referrer=new URL(document.referrer).hostname;}catch(e){}}
+  var m=location.pathname.match(/^\/(industries|services)\/([a-z0-9-]+)\//);
+  if(m){ctx[m[1]==='industries'?'industry':'service']=m[2];}
+  try{sessionStorage.setItem(K,JSON.stringify(ctx));}catch(e){}
+  window.hbContext=ctx;
+  document.querySelectorAll('a[href$="#contact"],a[href="#contact"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(typeof gtag==='function')gtag('event','cta_click',{page_path:location.pathname,industry:ctx.industry||'',service:ctx.service||''});
+    });
+  });
 })();
 </script>
 </body>

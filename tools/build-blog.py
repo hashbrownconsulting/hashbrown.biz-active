@@ -93,6 +93,18 @@ def build():
     io.open(os.path.join(ROOT, "posts.json"), "w", encoding="utf-8").write(
         json.dumps(posts, indent=2, ensure_ascii=False) + "\n")
 
+
+    # Server-render the post list into the blog index so crawlers see real links.
+    idx_path = os.path.join(ROOT, "blog", "index.html")
+    idx = io.open(idx_path, encoding="utf-8").read()
+    cards = "\n".join(
+        '    <a class="post-card" href="/blog/%s/"><span class="pc-meta">%s · %s</span><h3>%s</h3><p>%s</p><span class="pc-more">Read →</span></a>'
+        % (p["slug"], human(p["date"]), html.escape(p["author"]), html.escape(p["title"]), html.escape(p["excerpt"]))
+        for p in posts)
+    idx = re.sub(r"<!--posts:start-->.*?<!--posts:end-->", lambda m: "<!--posts:start-->\n" + cards + "\n<!--posts:end-->", idx, flags=re.S)
+    idx = idx.replace("—", ", ").replace("–", "-")
+    io.open(idx_path, "w", encoding="utf-8").write(idx)
+
     today = datetime.date.today().isoformat()
     urls = ["  <url>\n    <loc>%s%s</loc>\n    <lastmod>%s</lastmod>\n  </url>" % (SITE, p, today)
             for p, _ in STATIC_PAGES]
