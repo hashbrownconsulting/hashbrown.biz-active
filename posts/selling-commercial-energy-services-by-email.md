@@ -1,14 +1,14 @@
 ---
-title: Selling Commercial Energy Services By Email
+title: Selling Solar And Battery Systems By Email
 slug: selling-commercial-energy-services-by-email
 date: 2026-11-24
 author: Tom
-meta_title: Selling Commercial Energy Services By Email
-description: Commercial energy buyers have heard big savings numbers before. How to write cold email that offers a low-risk first step and keeps savings claims out.
-excerpt: Commercial energy buyers have heard big savings numbers before. How to write cold email that offers a low-risk first step and leaves the promises out.
+meta_title: Selling Solar And Battery Systems By Email
+description: Solar and battery buyers have heard big savings numbers before. How to write cold email that offers a low-risk first step and keeps promises out.
+excerpt: Solar and battery buyers have heard big savings numbers before. How to write cold email that offers a low-risk first step and leaves the promises out.
 ---
 
-Commercial energy buyers, from factory owners to property managers, have heard large savings claims many times. Cold email that repeats them tends to be ignored. Email that offers a clear service and a low-risk first step usually does better.
+Buyers of solar and battery systems, from factory owners to property managers, have heard large savings claims many times. Projects are often mid-ticket, roughly $10,000 to $500,000, which means more than one person usually weighs in. Cold email that repeats them tends to be ignored. Email that offers a clear service and a low-risk first step usually does better.
 
 ## Leave out the savings promise
 
@@ -32,4 +32,4 @@ Energy projects involve finance, operations and sometimes approvals. A sequence 
 
 ## Where this fits
 
-This is the approach behind our [energy work](/industries/energy/), alongside [outbound systems](/services/outbound-systems/). We are newer in this sector and say so on the first call.
+This is the approach behind our [renewable energy work](/industries/energy/), alongside [outbound systems](/services/outbound-systems/). We are newer in this sector and say so on the first call.

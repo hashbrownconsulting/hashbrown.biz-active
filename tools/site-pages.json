@@ -12,6 +12,10 @@
     "title": "Outsourced Business Development for B2B | Hash Brown"
   },
   {
+    "path": "/industries/commodities/",
+    "title": "Lead Generation for Commodity Service Firms | Hash Brown"
+  },
+  {
     "path": "/industries/crypto-web3/",
     "title": "B2B Outbound for Crypto and Web3 Companies | Hash Brown"
   },
@@ -25,7 +29,11 @@
   },
   {
     "path": "/industries/energy/",
-    "title": "Lead Generation for Energy and Solar Businesses | Hash Brown"
+    "title": "Solar and Battery Sales Lead Generation | Hash Brown"
+  },
+  {
+    "path": "/industries/finance/",
+    "title": "B2B Lead Generation for Finance Businesses | Hash Brown"
   },
   {
     "path": "/services/google-ads/",
@@ -58,6 +66,10 @@
   {
     "path": "/pricing/",
     "title": "Pricing | Priced in the Open | Hash Brown"
+  },
+  {
+    "path": "/industries/real-estate/",
+    "title": "B2B Lead Generation for Real Estate Firms | Hash Brown"
   },
   {
     "path": "/industries/recruitment/",
