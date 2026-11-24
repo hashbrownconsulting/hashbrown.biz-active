@@ -4,7 +4,7 @@ slug: winning-property-owners-with-cold-email
 date: 2026-11-24
 author: Tom
 meta_title: Winning Property Owners With Cold Email
-description: Owners and developers hear a lot about proven results. How commercial agents and property firms can write cold email that describes how they work and asks small.
+description: Owners and developers hear a lot about proven results. How commercial agents and property firms can write cold email that says how they work.
 excerpt: Owners and developers hear a lot about proven results. How agents and property firms can write cold email that describes how they work and asks small.
 ---
 
