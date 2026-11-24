@@ -185,6 +185,7 @@ nav{position:sticky;top:0;z-index:50;padding:12px var(--pad) 0;pointer-events:no
 .dd-menu a span{display:block;font-size:12.5px;font-weight:400;color:var(--ghost);margin-top:1px}
 .dd-menu a.all{margin-top:4px;padding-top:14px;border-top:1px solid var(--rule);border-radius:0 0 12px 12px;font-size:14px;font-weight:700}
 .dd.open .dd-menu{display:grid}
+@media(min-width:961px){.dd-menu{max-height:calc(100vh - 120px);overflow-y:auto}.dd-menu.wide{min-width:600px;max-width:calc(100vw - 32px);left:50%;transform:translateX(-50%);grid-template-columns:1fr 1fr}.dd-menu.wide a.all{grid-column:1/-1}.dd-menu.right{left:auto;right:-18px}}
 @media(hover:hover) and (min-width:961px){.dd:hover .dd-menu{display:grid}.dd:hover .dd-btn{color:var(--black)}.dd:hover .chev{transform:rotate(180deg)}}
 @media(max-width:960px){
   .nav-toggle{display:inline-flex}
@@ -703,7 +704,7 @@ html:not(.js) .tabpanel[hidden]{display:grid}
       <a href="/pricing/">Pricing</a>
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Industries <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="dd-menu">
+        <div class="dd-menu wide">
           <a href="/industries/telecommunications/"><b>Telecommunications</b><span>Carriers, fibre and network suppliers</span></a>
           <a href="/industries/data-centres/"><b>Data centres</b><span>Operators and suppliers</span></a>
           <a href="/industries/ai-software/"><b>AI and software</b><span>B2B software and AI companies</span></a>
@@ -729,7 +730,7 @@ html:not(.js) .tabpanel[hidden]{display:grid}
       </div>
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="dd-menu">
+        <div class="dd-menu right">
           <a href="/blog/"><b>Insights</b><span>Notes on outbound that actually works</span></a>
           <a href="/blog/cold-outreach-guide/"><b>Cold outreach guide</b><span>Doing it properly, in order</span></a>
           <a href="/blog/what-is-a-sales-discovery-call/"><b>Discovery call guide</b><span>How to run one that qualifies</span></a>
